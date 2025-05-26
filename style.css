@@ -20,7 +20,7 @@
   --verde-oliva-claro: #a3a847;
   --marfil-claro: #fdf5e6d3;
   --backgound-brown: #2a2a2a;
-  --backgound-lite: #302e2c;
+  --backgound-lite: #474542;
 
   --ff-poppins: "Poppins", sans-serif;
   --ff-montserrat: "Montserrat", sans-serif;
@@ -351,7 +351,7 @@ nav {
 }
 /*****************container*******************/
 .container {
-  padding: 50px 5%;
+  padding: 40px 0px 5% 5%;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fdfdfd;
@@ -535,11 +535,10 @@ nav {
   font-size: 1.1rem;
 }
 
-/* Responsive para móviles */
 /****************PAQUETES******************/
 /* Packages Section Styles */
 .packages {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   background-color: #f9f9f9;
 }
 
@@ -737,7 +736,7 @@ nav {
 /*******************************Estilos para el menu*******************************/
 
 .restaurantes-section {
-  padding: 80px 0;
+  padding: 10px 0;
   background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
 }
 
@@ -1000,7 +999,11 @@ nav {
 }
 /*******footerr********/
 .footer {
-  background-color: #2a2a2a;
+  background: linear-gradient(
+    to top right,
+    var(--backgound-brown),
+    var(--backgound-lite)
+  );
   color: #ffffff;
   font-family: "Arial", sans-serif;
 }
