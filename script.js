@@ -8,15 +8,15 @@ const images = [
 const texts = [
   [
     "Elegancia y comodidad",
-    "un ambiente acogedor que te hace sentir como en casa desde tu llegada.",
+    "un ambiente acogedor que te hace sentir como en casa.",
   ],
   [
     "Moderno y confortable",
-    "Relájate en un ambiente tranquilo con camas cómodas, baño privado. Cada detalle pensado para tu comodidad.",
+    "Relájate en un ambiente tranquilo, Cada detalle pensado para tu comodidad.",
   ],
   [
     "Sabores únicos con la mejor vista",
-    "Disfruta de desayuno buffet, almuerzos o cenas. Un espacio deal para saborear y relajarte.",
+    "Un espacio deal para saborear y relajarte.",
   ],
 ];
 
@@ -65,18 +65,23 @@ rgbKineticSlider = new rgbKineticSlider({
   navTextsRgbIntensity: 15, // set text rgb intensity for regular nav
 
   textTitleColor: "white",
-  textTitleSize: 100,
-  mobileTextTitleSize: 90,
+  textTitleSize: 100, // Tamaño de título en pantallas grandes
+  mobileTextTitleSize: 50, // Tamaño del título en dispositivos móviles
+
+  // Desplazamiento del título
   textTitleLetterspacing: 2,
-  textTitleOffsetTop: -30,
+  textTitleOffsetTop: -20,
   mobileTextTitleOffsetTop: -30,
 
+  // Subtítulos
   textSubTitleColor: "white",
-  textSubTitleSize: 35,
-  mobileTextSubTitleSize: 21,
-  textSubTitleLetterspacing: 2,
-  textSubTitleOffsetTop: 190,
-  mobileTextSubTitleOffsetTop: 110,
+  textSubTitleSize: 35, // Tamaño de subtítulo en pantallas grandes
+  mobileTextSubTitleSize: 17, // Aumenté el tamaño para mayor legibilidad
+  textSubTitleLetterspacing: 1,
+
+  // Ajustes de desplazamiento del subtítulo
+  textSubTitleOffsetTop: 170,
+  mobileTextSubTitleOffsetTop: 80, // set text margin // set text padding
 });
 
 let currentIndex = 0;
@@ -173,5 +178,27 @@ const sr = ScrollReveal({
 sr.reveal(".text", { delay: 200, origin: "top" });
 sr.reveal(".heading", { delay: 200, origin: "top" });
 sr.reveal(".ride-container .box", { delay: 400, origin: "top" });
-
+sr.reveal(".package-container", { delay: 200, origin: "top" });
+sr.reveal(".servicio", { delay: 200, origin: "top" });
+sr.reveal("#section-text", { delay: 200, origin: "top" });
+sr.reveal(".nav-header", { delay: 200, origin: "left" });
 // Scroll Reveal
+/******errores del plugin de facebook */
+window.addEventListener("error", function (e) {
+  if (
+    e.message.includes("facebook") ||
+    e.message.includes("fbcdn.net") ||
+    e.filename.includes("facebook")
+  ) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// Alternativa para navegadores antiguos
+window.onerror = function (msg, url, line, col, error) {
+  if (url.includes("facebook.com") || url.includes("fbcdn.net")) {
+    return true;
+  }
+  return false;
+};
