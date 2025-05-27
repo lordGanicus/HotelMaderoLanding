@@ -33,4 +33,57 @@ document.addEventListener("DOMContentLoaded", () => {
   sr.reveal(".servicio", { delay: 200, origin: "top" });
   sr.reveal("#section-text", { delay: 200, origin: "top" });
   sr.reveal(".nav-header", { delay: 200, origin: "left" });
+  // Slider para habitaciones
+
+  // Sliders para habitaciones estándar
+  const sliders = document.querySelectorAll(".slider-habitacion");
+
+  sliders.forEach((slider) => {
+    const images = slider.querySelector(".imagenes-slider");
+    const prevBtn = slider.querySelector(".anterior");
+    const nextBtn = slider.querySelector(".siguiente");
+    let currentIndex = 0;
+
+    function updateSlider() {
+      images.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % 3;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + 3) % 3;
+      updateSlider();
+    });
+  });
+  const suiteSliders = document.querySelectorAll(".slider-suite");
+
+  suiteSliders.forEach((slider) => {
+    const images = slider.querySelector(".imagenes-suite-slider");
+    const prevBtn = slider.querySelector(".anterior-suite");
+    const nextBtn = slider.querySelector(".siguiente-suite");
+    let currentIndex = 0;
+
+    function updateSlider() {
+      images.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % 3;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + 3) % 3;
+      updateSlider();
+    });
+
+    // Auto-avance opcional
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % 3;
+      updateSlider();
+    }, 3000);
+  });
 });

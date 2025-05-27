@@ -1178,181 +1178,355 @@ address {
   color: #c5a47e;
   text-decoration: none;
 }
-/****************************Habitaciones*********************************/
-.habitaciones {
-  padding: 4rem 0;
-  background: #f8f9fa;
-  font-family: "Montserrat", sans-serif;
-}
+/*************************Header/hab/salones/restaurante**********************/
 
-.habitaciones .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/****************************Habitaciones*********************************/
+/* Sección de habitaciones */
+.habitaciones {
+  padding: 3rem 0;
+  background: #f8f8f8;
 }
 
 .habitaciones h1 {
   text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
   color: #2c3e50;
   margin-bottom: 1rem;
-  font-family: "Playfair Display", serif;
 }
 
-.habitaciones .subtitle {
+.subtitulo {
   text-align: center;
-  color: #7f8c8d;
-  margin-bottom: 3rem;
+  color: #666;
   font-size: 1.1rem;
+  margin-bottom: 3rem;
+  display: block;
 }
 
-.room-gallery {
+/* Galería de habitaciones estándar */
+.galeria-estandar {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.room-card {
+.tarjeta-habitacion {
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.room-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.tarjeta-habitacion:hover {
+  transform: translateY(-10px);
 }
 
-.room-card.highlight {
-  border: 2px solid #3498db;
-}
-
-.room-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #3498db;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.room-slider {
-  height: 250px;
+.slider-habitacion {
+  position: relative;
+  height: 220px;
   overflow: hidden;
 }
 
-.room-slider img {
+.imagenes-slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.imagenes-slider img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-.room-info {
+.controles-slider {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.controles-slider button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.controles-slider button:hover {
+  background: #c9a769;
+  color: white;
+}
+
+.info-habitacion {
   padding: 1.5rem;
 }
 
-.room-info h2 {
+.info-habitacion h2 {
+  font-size: 1.4rem;
   color: #2c3e50;
   margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.room-price {
-  color: #e74c3c;
-  font-size: 1.2rem;
+.precio {
+  color: #c9a769;
   font-weight: 600;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-.room-description {
-  color: #34495e;
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
+.descripcion {
+  color: #555;
   font-size: 0.95rem;
-}
-
-.room-details h3 {
-  color: #2c3e50;
-  margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
-}
-
-.room-features,
-.room-services {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.room-features li,
-.room-services li {
+.detalles h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 1rem 0 0.7rem;
+}
+
+.caracteristicas,
+.servicios {
+  list-style: none;
+  margin-bottom: 1.2rem;
+}
+
+.caracteristicas li,
+.servicios li {
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #34495e;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
-.room-features i {
+.caracteristicas i {
   color: #2ecc71;
 }
 
-.room-services i {
+.servicios i {
   color: #3498db;
 }
 
-.btn-book {
-  width: 100%;
-  padding: 12px;
-  background: #3498db;
+.boton-reserva {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c9a769;
   color: white;
   border: none;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
 }
 
-.btn-book:hover {
-  background: #2980b9;
+.boton-reserva:hover {
+  background: #b38a58;
+}
+
+/* Sección de suites destacadas - Versión compacta */
+.suites-destacadas {
+  margin-top: 1.5rem;
+  padding: 5rem;
+}
+
+.suites-destacadas h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.suites-destacadas h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c9a769;
+  margin: 0.5rem auto 0;
+}
+
+.galeria-suites {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.tarjeta-suite {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.tarjeta-suite .etiqueta {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #c9a769;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.slider-suite {
+  position: relative;
+  height: 100%;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.imagenes-suite-slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.imagenes-suite-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.controles-suite-slider {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.controles-suite-slider button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.controles-suite-slider button:hover {
+  background: #c9a769;
+  color: white;
+}
+
+.tarjeta-suite .info-suite {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tarjeta-suite .info-suite h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  font-family: "Playfair Display", serif;
+}
+
+.tarjeta-suite .precio-suite {
+  font-size: 1rem;
+  color: #c9a769;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-suite .descripcion-suite {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 /* Responsive */
-@media (min-width: 768px) {
-  .room-gallery {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 992px) {
+  .tarjeta-suite {
+    grid-template-columns: 1fr;
   }
 
-  .room-card.highlight {
-    grid-column: span 2;
-  }
-
-  .room-slider {
-    height: 200px;
+  .slider-suite {
+    min-height: 200px;
   }
 }
 
-@media (min-width: 992px) {
-  .room-gallery {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  .suites-destacadas h2 {
+    font-size: 1.3rem;
   }
 
-  .room-card.highlight {
-    grid-column: span 3;
+  .tarjeta-suite .info-suite {
+    padding: 1rem;
   }
 
-  .room-slider {
-    height: 220px;
+  .tarjeta-suite .info-suite h3 {
+    font-size: 1.1rem;
+  }
+
+  .tarjeta-suite .precio-suite {
+    font-size: 0.95rem;
+  }
+
+  .tarjeta-suite .descripcion-suite {
+    font-size: 0.85rem;
+  }
+
+  .controles-suite-slider button {
+    width: 28px;
+    height: 28px;
+  }
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .tarjeta-suite {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-suite .imagen-suite {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .habitaciones h1 {
+    font-size: 2rem;
+  }
+
+  .galeria-estandar {
+    grid-template-columns: 1fr;
   }
 }
 /*************************Ajustes para dispositivos moviles *******************************/
