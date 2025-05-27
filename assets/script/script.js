@@ -168,21 +168,8 @@ navToggle.addEventListener("click", function () {
 });
 /************************* efectos para los servicios**********************************************/
 
-const sr = ScrollReveal({
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
-  reset: true,
-});
-
-sr.reveal(".text", { delay: 200, origin: "top" });
-sr.reveal(".heading", { delay: 200, origin: "top" });
-sr.reveal(".ride-container .box", { delay: 400, origin: "top" });
-sr.reveal(".package-container", { delay: 200, origin: "top" });
-sr.reveal(".servicio", { delay: 200, origin: "top" });
-sr.reveal("#section-text", { delay: 200, origin: "top" });
-sr.reveal(".nav-header", { delay: 200, origin: "left" });
 // Scroll Reveal
+
 /******errores del plugin de facebook */
 window.addEventListener("error", function (e) {
   if (
