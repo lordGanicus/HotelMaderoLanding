@@ -1,8 +1,8 @@
 // images setup
 const images = [
-  "https://i.ibb.co/W4Ndq1RG/Recepcion-Fondo-Grande.jpg",
-  "https://i.ibb.co/QvP9WckT/Suit-Familiar-Grande.jpg",
-  "https://i.ibb.co/d4v7YtVC/Urban-Sky-Grande.jpg",
+  "https://i.ibb.co/FL6KgwXC/Recepcion-Fondo.jpg",
+  "https://i.ibb.co/4CXydrX/Suit-Familiar-Grande.jpg",
+  "https://i.ibb.co/ZRPfxsMW/Urban-Sky-Grande.jpg",
 ];
 // content setup
 const texts = [
