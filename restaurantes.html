@@ -25,15 +25,192 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="nav">
         <div id="nav-center"></div>
       </nav>
     </header>
     <main>
-      <section>
-        <div class="container">
-          <h1>Restaurante</h1>
-          <p>Restaurantes</p>
+      <section class="restaurantes-section">
+        <div class="container restaurantes-container">
+          <div class="heading">
+            <span>Disfruta de una experiencia gastronómica única</span>
+            <h1>Nuestros Restaurantes</h1>
+          </div>
+
+          <!-- Urban Center Sport Bar -->
+          <div class="restaurante-card">
+            <div class="restaurante-media">
+              <div class="restaurante-images">
+                <div class="restaurante-img-top">
+                  <div class="restaurante-img-small">
+                    <img
+                      src="assets/images/UrbanCenter/URBAN-CENTER.jpg"
+                      alt="Urban Center"
+                    />
+                  </div>
+                  <div class="restaurante-img-small">
+                    <img
+                      src="assets/images/UrbanCenter/DESAYUNO URBAN CENTER.jpg"
+                      alt="Urban Center interior"
+                    />
+                  </div>
+                </div>
+                <div class="restaurante-slider">
+                  <div class="restaurante-img-large">
+                    <img
+                      src="assets/images/UrbanCenter/DESAYUNO URBAN CENTER2.jpg"
+                      alt="Urban Center comida"
+                    />
+                    <img
+                      src="assets/images/UrbanCenter/BIFE DE CHORIZO 2.jpg"
+                      alt="Urban Center comida"
+                    />
+
+                    <img
+                      src="assets/images/UrbanCenter/HAMBURGUESAS URBAN.jpg"
+                      alt="Urban Center comida"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="restaurante-controls">
+                <button class="restaurante-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button class="restaurante-next">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+              <!--  </div>-->
+            </div>
+
+            <div class="restaurante-info">
+              <h2 class="restaurante-title">Urban Center Sport Bar</h2>
+              <div class="restaurante-location">
+                <i class="ri-map-pin-line"></i> Planta Baja - Ambiente deportivo
+              </div>
+
+              <p class="restaurante-description">
+                Establecido en la planta baja del Hotel, con un menú variado:
+                desayuno buffet, desayunos americanos y continental. Almuerzo
+                Ejecutivo con salad bar, sopa del día y plato principal. Por las
+                tardes, menú a la carta de comida rápida y tradicional.
+              </p>
+
+              <div class="restaurante-features">
+                <h3><i class="ri-time-line"></i> Horarios destacados</h3>
+                <ul>
+                  <li>Desayuno buffet: 7:30 - 10:30</li>
+                  <li>Almuerzo ejecutivo: 12:30 - 15:00</li>
+                  <li>Menu a la carta:</li>
+                  <li>Comida rapida y tradicional:</li>
+                </ul>
+              </div>
+
+              <div class="restaurante-actions">
+                <button
+                  onclick="window.open('https://www.facebook.com/UrbanCenterSportBar')"
+                  class="restaurante-btn restaurante-btn-menu"
+                >
+                  <i class="ri-restaurant-line"></i> Ver Menú
+                </button>
+                <button
+                  onclick="window.open('https://wa.me/59167176963?text=Hola%2C%20quiero%20reservar')"
+                  class="restaurante-btn restaurante-btn-reserve"
+                >
+                  <i class="ri-calendar-line"></i> Reservar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cielo Urbano -->
+          <div class="restaurante-card">
+            <div class="restaurante-info">
+              <h2 class="restaurante-title">Cielo Urbano</h2>
+              <div class="restaurante-location">
+                <i class="ri-map-pin-line"></i> Piso 7 - Vista panorámica
+              </div>
+
+              <p class="restaurante-description">
+                En el Piso 7 del Hotel, con vista espectacular de la ciudad.
+                Desayuno Brunch con 4 opciones + vegetariana. Almuerzo buffet
+                parrillero con 4 tipos de carne. Tardes con variedad de cafés y
+                pastelería. Noches con comida fusión y coctelería premium.
+              </p>
+
+              <div class="restaurante-features">
+                <h3><i class="ri-star-line"></i> Experiencias únicas</h3>
+                <ul>
+                  <li>Brunch gourmet los fines de semana</li>
+                  <li>Cortes de carne premium</li>
+                  <li>Postres artesanales</li>
+                  <li>Mixología de autor</li>
+                  <li>Comida fusión y cocteleria premium</li>
+                </ul>
+              </div>
+
+              <div class="restaurante-actions">
+                <button
+                  onclick="window.open('https://www.facebook.com/RestobarCieloUrbano/')"
+                  class="restaurante-btn restaurante-btn-menu"
+                >
+                  <i class="ri-restaurant-line"></i> Ver Menú
+                </button>
+                <button
+                  onclick="window.open('https://wa.me/59161239790?text=Hola%2C%20quiero%20reservar')"
+                  class="restaurante-btn restaurante-btn-reserve"
+                >
+                  <i class="ri-calendar-line"></i> Reservar
+                </button>
+              </div>
+            </div>
+
+            <div class="restaurante-media">
+              <div class="restaurante-images">
+                <div class="restaurante-img-top">
+                  <div class="restaurante-img-small">
+                    <img
+                      src="assets/images/UrbanSky/URBAN-SKY3.jpg"
+                      alt="Urban Center"
+                    />
+                  </div>
+                  <div class="restaurante-img-small">
+                    <img
+                      src="assets/images/UrbanSky/BRUNCH-47.jpg"
+                      alt="Urban Center interior"
+                    />
+                  </div>
+                </div>
+                <div class="restaurante-slider">
+                  <div class="restaurante-img-large">
+                    <img
+                      src="assets/images/UrbanSky/URBAN-SKY.jpg"
+                      alt="Urban Center comida"
+                    />
+                    <img
+                      src="assets/images/UrbanSky/BRUNCH-32.jpg"
+                      alt="Urban Center comida"
+                    />
+
+                    <img
+                      src="assets/images/UrbanSky/PLATO 4-2.jpg"
+                      alt="Urban Center comida"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="restaurante-controls">
+                <button class="restaurante-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+                </button>
+                <button class="restaurante-next">
+                  <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+              <!--  </div>-->
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -57,10 +234,10 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="/assets/script/script.js"></script>
     <script src="/assets/script/reciclar.js"></script>
   </body>

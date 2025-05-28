@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   sr.reveal(".servicio", { delay: 200, origin: "top" });
   sr.reveal("#section-text", { delay: 200, origin: "top" });
   sr.reveal(".nav-header", { delay: 200, origin: "left" });
+  sr.reveal(".tarjeta-habitacion", { delay: 200, origin: "top" });
+  sr.reveal(".tarjeta-suite", { delay: 200, origin: "top" });
   // Slider para habitaciones
 
   // Sliders para habitaciones estándar
@@ -58,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateSlider();
     });
   });
+  /***********movimiento de slider  */
   const suiteSliders = document.querySelectorAll(".slider-suite");
 
   suiteSliders.forEach((slider) => {
@@ -84,6 +87,37 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => {
       currentIndex = (currentIndex + 1) % 3;
       updateSlider();
-    }, 3000);
+    }, 3500);
+  });
+  /************************slider para restaurante **********************/
+  document.querySelectorAll(".restaurante-card").forEach((card) => {
+    const slider = card.querySelector(".restaurante-slider");
+    const imgContainer = slider.querySelector(".restaurante-img-large");
+    const prevBtn = card.querySelector(".restaurante-prev");
+    const nextBtn = card.querySelector(".restaurante-next");
+    const images = imgContainer.querySelectorAll("img");
+
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    function updateSlider() {
+      imgContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateSlider();
+    });
+
+    // Auto-slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateSlider();
+    }, 3500);
   });
 });

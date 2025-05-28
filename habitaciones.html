@@ -25,7 +25,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="nav">
         <div id="nav-center"></div>
       </nav>
     </header>
@@ -97,7 +97,13 @@
                     </li>
                   </ul>
                 </div>
-                <a href="#" class="boton-reserva">Reservar ahora</a>
+                <button
+                  class="restaurante-btn restaurante-btn-reserve"
+                  id="btnReserva"
+                  onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20habitacion%20simple', '_blank')"
+                >
+                  <i class="ri-calendar-line"></i> Reservar ahora
+                </button>
               </div>
             </div>
 
@@ -160,7 +166,13 @@
                     </li>
                   </ul>
                 </div>
-                <a href="#" class="boton-reserva">Reservar ahora</a>
+                <button
+                  class="restaurante-btn restaurante-btn-reserve"
+                  id="btnReserva"
+                  onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20habitacion%20matrimonial', '_blank')"
+                >
+                  <i class="ri-calendar-line"></i> Reservar ahora
+                </button>
               </div>
             </div>
 
@@ -225,7 +237,13 @@
                     </li>
                   </ul>
                 </div>
-                <a href="#" class="boton-reserva">Reservar ahora</a>
+                <button
+                  class="restaurante-btn restaurante-btn-reserve"
+                  id="btnReserva"
+                  onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20habitacion%20doble', '_blank')"
+                >
+                  <i class="ri-calendar-line"></i> Reservar ahora
+                </button>
               </div>
             </div>
 
@@ -256,7 +274,7 @@
                 </div>
               </div>
               <div class="info-habitacion">
-                <h2>Business Familiar</h2>
+                <h2>Habitacion Familiar</h2>
                 <span class="precio">$200/noche</span>
                 <p class="descripcion">
                   Una habitación ideal y compacta para pequeñas familias de 3
@@ -289,7 +307,13 @@
                     </li>
                   </ul>
                 </div>
-                <a href="#" class="boton-reserva">Reservar ahora</a>
+                <button
+                  class="restaurante-btn restaurante-btn-reserve"
+                  id="btnReserva"
+                  onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20habitacion%20familiar', '_blank')"
+                >
+                  <i class="ri-calendar-line"></i> Reservar ahora
+                </button>
               </div>
             </div>
           </div>
@@ -364,37 +388,20 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="boton-reserva">Reservar ahora</a>
+                  <button
+                    class="restaurante-btn restaurante-btn-reserve"
+                    id="btnReserva"
+                    onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20suit%20matrimonial', '_blank')"
+                  >
+                    <i class="ri-calendar-line"></i> Reservar ahora
+                  </button>
                 </div>
               </div>
 
               <!-- Suite Familiar -->
               <div class="tarjeta-suite">
                 <div class="etiqueta">Familiar</div>
-                <div class="slider-suite">
-                  <div class="imagenes-suite-slider">
-                    <img
-                      src="assets/images/SuitFamiliar/SUITE FAMILIAR6.jpg"
-                      alt="Suite Familiar vista 2"
-                    />
-                    <img
-                      src="assets/images/SuitFamiliar/SUITE FAMILIAR7.jpg"
-                      alt="Suite Familiar baño"
-                    />
-                    <img
-                      src="assets/images/SuitFamiliar/SUITE FAMILIAR4.jpg"
-                      alt="Suite Familiar vista 1"
-                    />
-                  </div>
-                  <div class="controles-suite-slider">
-                    <button class="anterior-suite">
-                      <i class="ri-arrow-left-s-line"></i>
-                    </button>
-                    <button class="siguiente-suite">
-                      <i class="ri-arrow-right-s-line"></i>
-                    </button>
-                  </div>
-                </div>
+
                 <div class="info-suite">
                   <h3>Suite Familiar</h3>
                   <span class="precio-suite">$320/noche</span>
@@ -433,7 +440,37 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="boton-reserva">Reservar ahora</a>
+                  <button
+                    class="restaurante-btn restaurante-btn-reserve"
+                    id="btnReserva"
+                    onclick="window.open('https://wa.me/59167160515?text=Hola%20quiero%20reservar%20la%20suite%20familiar', '_blank')"
+                  >
+                    <i class="ri-calendar-line"></i> Reservar ahora
+                  </button>
+                </div>
+                <div class="slider-suite">
+                  <div class="imagenes-suite-slider">
+                    <img
+                      src="assets/images/SuitFamiliar/SUITE FAMILIAR6.jpg"
+                      alt="Suite Familiar vista 2"
+                    />
+                    <img
+                      src="assets/images/SuitFamiliar/SUITE FAMILIAR7.jpg"
+                      alt="Suite Familiar baño"
+                    />
+                    <img
+                      src="assets/images/SuitFamiliar/SUITE FAMILIAR4.jpg"
+                      alt="Suite Familiar vista 1"
+                    />
+                  </div>
+                  <div class="controles-suite-slider">
+                    <button class="anterior-suite">
+                      <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <button class="siguiente-suite">
+                      <i class="ri-arrow-right-s-line"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -462,10 +499,10 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="/assets/script/script.js"></script>
     <script src="/assets/script/reciclar.js"></script>
   </body>
