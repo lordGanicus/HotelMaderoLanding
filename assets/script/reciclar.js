@@ -19,24 +19,32 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error al cargar footer:", error));
 
+  // Slider para habitaciones
   const sr = ScrollReveal({
     distance: "60px",
-    duration: 2500,
-    delay: 400,
-    reset: true,
+    duration: 1000, // Más rápido que 2500
+    delay: 200,
+    reset: false, // ¡Importante! Evita repetir animaciones
+    easing: "ease-in-out",
   });
 
-  sr.reveal(".text", { delay: 200, origin: "top" });
-  sr.reveal(".heading", { delay: 200, origin: "top" });
-  sr.reveal(".ride-container .box", { delay: 400, origin: "top" });
-  sr.reveal(".package-container", { delay: 200, origin: "top" });
-  sr.reveal(".servicio", { delay: 200, origin: "top" });
-  sr.reveal("#section-text", { delay: 200, origin: "top" });
-  sr.reveal(".nav-header", { delay: 200, origin: "left" });
-  sr.reveal(".tarjeta-habitacion", { delay: 200, origin: "top" });
-  sr.reveal(".tarjeta-suite", { delay: 200, origin: "top" });
-  // Slider para habitaciones
+  // Agrupamos elementos con origen similar
+  sr.reveal(
+    ".text, .heading, .package-container, .servicio, #section-text, .tarjeta-habitacion, .tarjeta-suite",
+    {
+      origin: "top",
+    }
+  );
 
+  sr.reveal(".ride-container .box", {
+    delay: 300,
+    origin: "bottom",
+  });
+
+  sr.reveal(".nav-header", {
+    delay: 300,
+    origin: "left",
+  });
   // Sliders para habitaciones estándar
   const sliders = document.querySelectorAll(".slider-habitacion");
 
