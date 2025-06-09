@@ -111,7 +111,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   z-index: 1;
 }
 
@@ -805,162 +805,239 @@ nav {
   margin-bottom: 0.5rem;
 }
 /*******************************Estilos para el menu*******************************/
-
-.restaurantes-section {
-  padding: 10px 0;
-  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+.restaurante-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f9f9f7;
+  line-height: 1.4;
 }
 
-/* Contenedor de restaurantes */
-.restaurantes-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+.restaurante-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Tarjeta de restaurante */
 .restaurante-card {
   display: flex;
   flex-wrap: wrap;
   background: white;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 40px;
 }
 
-.restaurante-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
+/* Sección izquierda (información compacta) */
 .restaurante-info {
   flex: 1;
   min-width: 300px;
-  padding: 40px;
-  background: linear-gradient(
-    to top right,
-    var(--backgound-brown),
-    var(--backgound-lite)
-  );
-  color: white;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .section-subtitle {
-  color: #b38b59 !important;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #b38b59;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .section-title {
-  font-size: 2.3rem;
-  margin: 10px 0 20px;
-  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #2a2a2a;
+  margin: 0 0 15px 0;
+  font-weight: 700;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 8px;
 }
 
 .section-title:after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--madera-oscura),
-    var(--ocre-claro)
-  );
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #b38b59;
 }
 
-.restaurante-logo {
-  width: 120px;
-  margin: 20px auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+/* Diseño compacto para servicios */
+.restaurante-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.servicio {
+  background: #f8f8f8;
+  padding: 0;
+  border-radius: 6px;
+  border-left: 3px solid #b38b59;
+}
+
+.servicio-header {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.servicio-header i {
+  font-size: 1rem;
+  color: #b38b59;
+  min-width: 20px;
+}
+
+.servicio-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+.servicio-content {
+  padding: 0 15px 10px 40px;
+  display: none; /* Inicialmente oculto */
+}
+
+.servicio.active .servicio-content {
+  display: block;
+}
+
+.servicio ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.servicio ul li {
+  color: #555;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.servicio ul li::before {
+  content: "•";
+  color: #b38b59;
+  position: absolute;
+  left: -12px;
 }
 
 .restaurante-details {
-  /*display: flex;*/
-  margin: 20px 0;
-  /*align-items: center;*/
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.restaurante-hours {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  margin: 0;
 }
 
 .btn-menu {
-  background: #b38b59;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: auto;
   display: inline-flex;
   align-items: center;
+  gap: 6px;
+  background: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .btn-menu:hover {
-  background: #9a7449;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(179, 139, 89, 0.3);
+  background: #3a516e;
 }
 
-.btn-menu i {
-  margin-left: 8px;
-}
-
-/* Sección del menú */
-.menu-frame {
+/* Sección derecha (frame de Facebook) */
+.menu-frame-container {
   flex: 1;
   min-width: 300px;
   display: flex;
   flex-direction: column;
 }
 
-.iframe-header {
-  background: #b38b59;
-  color: white;
-  padding: 15px 20px;
+.frame-header {
+  padding: 20px;
   text-align: center;
+  background: linear-gradient(135deg, #2c3e50, #4a6491);
+  color: white;
 }
 
-.iframe-header h3 {
+.frame-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin: 0 0 5px 0;
+}
+
+.frame-header p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
-  font-size: 1.3rem;
 }
 
-.iframe-header p {
-  margin: 5px 0 0;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.iframe-container {
+.frame-wrapper {
   flex-grow: 1;
   padding: 15px;
-  background: #f5f5f5;
 }
 
-.iframe-container iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.frame-content {
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-/*menu servicios*/
+
+.frame-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .restaurante-info,
+  .menu-frame-container {
+    min-width: 100%;
+  }
+
+  .restaurante-info {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .frame-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .frame-content iframe {
+    min-height: 350px;
+  }
+}
+/****menu servicios*/
+
 .restaurante-servicios {
   display: flex;
   flex-wrap: wrap;
@@ -1182,7 +1259,6 @@ address {
   color: #c5a47e;
   text-decoration: none;
 }
-/*************************Header/hab/salones/restaurante**********************/
 
 /****************************Habitaciones*********************************/
 /* Sección de habitaciones */
@@ -1210,7 +1286,7 @@ address {
 /* Galería de habitaciones estándar */
 .galeria-estandar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }

@@ -185,68 +185,87 @@
         
         <div class="restaurantes-container">
           <!-- Urban Center Sport Bar -->
-          <div class="restaurante-card">
+        <div class="restaurante-card">
+            <!-- Sección izquierda (información compacta) -->
             <div class="restaurante-info">
-              <h4 class="section-subtitle">Planta Baja</h4>
-              <h2 class="section-title">URBAN CENTER SPORT BAR</h2>
-              
-              <div class="restaurante-servicios">
-                <div class="servicio">
-                  <h3><i class="fas fa-sun"></i> Desayunos</h3>
-                  <ul>
-                    <li>Buffet matutino</li>
-                    <li>Americano y continental</li>
-                  </ul>
+                <h4 class="section-subtitle">Planta Baja</h4>
+                <h2 class="section-title">URBAN CENTER SPORT BAR</h2>
+                
+                <div class="restaurante-servicios">
+                    <div class="servicio active">
+                        <div class="servicio-header">
+                            <i class="fas fa-sun"></i>
+                            <h3>Desayunos</h3>
+                        </div>
+                        <div class="servicio-content">
+                            <ul>
+                                <li>Buffet matutino</li>
+                                <li>Opciones americana/continental</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="servicio">
+                        <div class="servicio-header">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Almuerzos</h3>
+                        </div>
+                        <div class="servicio-content">
+                            <ul>
+                                <li>Menú ejecutivo (L-S)</li>
+                                <li>Salad bar + sopa del día</li>
+                                <li>2 opciones principales + postre</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="servicio">
+                        <div class="servicio-header">
+                            <i class="fas fa-hamburger"></i>
+                            <h3>Tardes</h3>
+                        </div>
+                        <div class="servicio-content">
+                            <ul>
+                                <li>Comida rápida</li>
+                                <li>Pizzas y tradiciones</li>
+                                <li>Bebidas variadas</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="servicio">
-                  <h3><i class="fas fa-utensils"></i> Almuerzos</h3>
-                  <ul>
-                    <li>Ejecutivo (L-S): Salad bar, sopa del día</li>
-                    <li>2 opciones de plato principal + postre</li>
-                  </ul>
+                <div class="restaurante-details">
+                    <p class="restaurante-hours">
+                        <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
+                    </p>
                 </div>
                 
-                <div class="servicio">
-                  <h3><i class="fas fa-hamburger"></i> Tardes</h3>
-                  <ul>
-                    <li>Menú a la carta: comida rápida</li>
-                    <li>Comida tradicional y pizzas</li>
-                    <li>Bebidas al gusto</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div class="restaurante-details">
-                <p class="restaurante-hours">
-                  <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
-                </p>
-                
-              </div>
-              
-              <button onclick="window.open('https://www.facebook.com/UrbanCenterSportBar')" class="btn btn-menu">
-                Ver Menú Completo <i class="fas fa-external-link-alt"></i>
-              </button>
+                <button onclick="window.open('https://www.facebook.com/UrbanCenterSportBar')" class="btn-menu">
+                    Ver Menú Completo <i class="fas fa-external-link-alt"></i>
+                </button>
             </div>
             
-            <div class="menu-frame">
-              <div class="iframe-header">
-                <h3>Menú del Día</h3>
-                <p>Actualizado diariamente</p>
-              </div>
-              <div class="iframe-container">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUrbanCenterSportBar&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                  width="500"
-                  height="600"
-                   style="border: none;"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    sandbox="allow-scripts allow-same-origin"
-                    data-embed-source="facebook"></iframe>
+            <!-- Sección derecha (frame de Facebook) -->
+            <div class="menu-frame-container">
+                <div class="frame-header">
+                    <h3>Menú del Día</h3>
+                    <p>Actualizado en nuestra página de Facebook</p>
+                </div>
+                
+                <div class="frame-wrapper">
+                    <div class="frame-content">
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUrbanCenterSportBar&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                            width="500"
+                            height="600"
+                            style="border: none;"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+                </div>
             </div>
-          </div>
-          </div>
+        </div>
           <!-- Cielo Urbano -->
           <div class="restaurante-card">
             <div class="restaurante-info">
@@ -254,41 +273,47 @@
               <h2 class="section-title">CIELO URBANO</h2>
               
               <div class="restaurante-servicios">
-                <div class="servicio">
-                  <h3><i class="fas fa-cloud-sun"></i> Mañanas</h3>
-                  <ul>
-                    <li>4 opciones de Desayuno Brunch</li>
-                    <li>1 opción vegetariana</li>
-                  </ul>
-                </div>
+               <div class="servicio">
+                    <div class="servicio-header">
+                      <i class="fas fa-cloud-sun"></i>
+                      <h3>Mañanas</h3>
+                    </div>
+                    <div class="servicio-content">
+                      <ul>
+                        <li>4 opciones de Desayuno Brunch</li>
+                        <li>1 opción vegetariana</li>
+                      </ul>
+                    </div>
+                  </div>
                 
                 <div class="servicio">
-                  <h3><i class="fas fa-fire"></i> Almuerzos</h3>
-                  <ul>
-                    <li>Buffet Parrillero</li>
-                    <li>4 tipos de carne a elección</li>
-                    <li>Ensalada buffet + guarniciones</li>
-                    <li>Postre de la casa</li>
-                  </ul>
+                    <div class="servicio-header">
+                      <i class="fas fa-fire"></i>
+                      <h3>Almuerzos</h3>
+                    </div>
+                    <div class="servicio-content">
+                      <ul>
+                        <li>Buffet Parrillero</li>
+                        <li>4 tipos de carne a elección</li>
+                        <li>Ensalada buffet + guarniciones</li>
+                        <li>Postre de la casa</li>
+                      </ul>
+                    </div>
                 </div>
-                
+         
                 <div class="servicio">
-                  <h3><i class="fas fa-coffee"></i> Tardes</h3>
-                  <ul>
-                    <li>Variedad de cafés especiales</li>
-                    <li>Selección de pastelería fina</li>
-                  </ul>
-                </div>
-                
-                <div class="servicio">
-                  <h3><i class="fas fa-moon"></i> Noches</h3>
-                  <ul>
-                    <li>Menú gourmet a la carta</li>
-                    <li>Coctelería de autor</li>
-                  </ul>
-                </div>
-              </div>
-              
+                  <div class="servicio-header">
+                    <i class="fas fa-moon"></i>
+                    <h3>Noches</h3>
+                  </div>
+                  <div class="servicio-content">
+                    <ul>
+                      <li>Menú gourmet a la carta</li>
+                      <li>Coctelería de autor</li>
+                    </ul>
+                  </div>
+                  </div>
+               </div>
               <div class="restaurante-details">
                 <p class="restaurante-hours">
                   <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
@@ -301,12 +326,13 @@
               </button>
             </div>
             
-            <div class="menu-frame">
-              <div class="iframe-header">
-                <h3>Menú del Día</h3>
-                <p>Actualizado diariamente</p>
-              </div>
-              <div class="iframe-container">
+           <div class="menu-frame-container">
+                <div class="frame-header">
+                    <h3>Menú del Día</h3>
+                    <p>Actualizado en nuestra página de Facebook</p>
+                </div>
+              <div class="frame-wrapper">
+                    <div class="frame-content">
                 <iframe
                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRestobarCieloUrbano&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
                     width="500"
@@ -317,6 +343,7 @@
                     sandbox="allow-scripts allow-same-origin"
                     data-embed-source="facebook">
                 </iframe>
+              </div>
               </div>
             </div>
           </div>

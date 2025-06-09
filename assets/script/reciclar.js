@@ -129,3 +129,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3500);
   });
 });
+// Acordeón para los servicios
+document.querySelectorAll(".servicio-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const servicio = header.parentElement;
+    servicio.classList.toggle("active");
+  });
+});
