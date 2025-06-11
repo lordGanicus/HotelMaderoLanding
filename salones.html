@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madero Hotel & Suites</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -24,280 +33,598 @@
     />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
-  <body>
+  <body class="body-salones">
     <header>
       <nav id="nav">
         <div id="nav-center"></div>
       </nav>
     </header>
-    <main>
-      <section class="restaurantes-section">
-        <div class="container restaurantes-container">
-          <div class="heading">
-
-          <!-- Salón Robles -->
-          <div class="salon-caoba-container">
-            <div class="salon-header">
-              <div class="heading">
-            <span
-              ></span
-            >
-            <h1>Salón Robles</h1>
-            </div>
-
-            <div class="salon-content">
-              <div class="salon-imagenes">
-                <div class="imagen-principal">
-                  <img
-                    src="assets/images/salones/Robles1.png"
-                    alt="Vista principal Salón Caoba"
-                  />
-                </div>
-                <div class="imagenes-secundarias">
-                  <img
-                    src="assets/images/salones/Robles2.png"
-                    alt="Detalle Salón Caoba"
-                  />
-                  <img
-                    src="assets/images/salones/Robles3.png"
-                    alt="Ambiente Salón Caoba"
-                  />
-                </div>
-              </div>
-
-              <div class="salon-descripcion">
-                <h3 class="descripcion-titulo">
-                  Uno de Los Salones principales del Hotel , ya que cuenta con ingreso propio e ideal para cualquier tipo de evento como:
-                </h3>
-                <p>Ideal para celebrar:</p>
-
-                <div class="eventos-destacados">
-                  <span class="evento-tag">👶 Baby Shower</span>
-                  <span class="evento-tag">🎂 Cumpleaños</span>
-                  <span class="evento-tag">💍 Aniversarios</span>
-                  <span class="evento-tag">💼 Eventos Corporativos</span>
-                  <span class="evento-tag">🎓 Cenas de graduación</span>
-                  <span class="evento-tag">👰‍♀️ Bodas</span>
-                  <span class="evento-tag">🎉 15 años</span>
-                </div>
-              </div>
-
-              <div class="salon-servicios">
-                <h3 class="servicios-titulo">Servicios incluidos</h3>
-                <ul class="servicios-lista">
-                  <li>
-                    <i class="ri-user-line"></i> Capacidad: 10-150 personas
-                  </li>
-                  <li><i class="ri-wifi-line"></i> Wifi de alta velocidad</li>
-                  
-                  <li><i class="ri-speaker-line"></i> Sistema de sonido</li>
-                  <li><i class="ri-mic-line"></i> Micrófono inalámbrico</li>
-                  <li>
-                    <i class="ri-slideshow-line"></i> Proyector y pantalla
-                  </li>
-                  <li><i class="ri-tv-line"></i> Pantalla digital</li>
-                  <li><i class="ri-restaurant-line"></i> Opción de catering</li>
-                  <li><i class="ri-lightbulb-line"></i> Iluminación profesional</li>
-                   <li><i class="ri-calendar-check-line"></i> Coordinadora de eventos</li>
-                </ul>
-              </div>
-              <button
-                  class="cotizar-btn"
-                  onclick="window.open('https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20salon%20robles', '_blank')"
-                >
-                  <i class="ri-calendar-event-line"></i> Cotizar este salón
-                </button>
-            </div>
-          </div>
-
-          <!-- Salón Cielo Urbano -->
-           <div class="salon-caoba-container">
-            <div class="salon-header">
-               <div class="heading">
-            <span
-              ></span
-            >
-            <h1>Salón Cielo Urbano</h1>
-            </div>
-
-            <div class="salon-content">
-              <div class="salon-imagenes">
-                <div class="imagen-principal">
-                  <img
-                    src="assets/images/salones/Cielo1.png"
-                    alt="Vista principal Salón Caoba"
-                  />
-                </div>
-                <div class="imagenes-secundarias">
-                  <img
-                    src="assets/images/salones/Cielo2.png"
-                    alt="Detalle Salón Caoba"
-                  />
-                  <img
-                    src="assets/images/salones/Cielo3.png"
-                    alt="Ambiente Salón Caoba"
-                  />
-                </div>
-              </div>
-
-              <div class="salon-descripcion">
-                <h3 class="descripcion-titulo">
-                  Nuestro Salón  cuenta con vista al centro de la ciudad ,
-               con una estructura tipo ya que cuenta con ingreso propio e ideal para cualquier tipo de evento como:
-                </h3>
-                <p>Ideal para celebrar:</p>
-
-                <div class="eventos-destacados">
-                  <span class="evento-tag">👶 Baby Shower</span>
-                  <span class="evento-tag">🎂 Cumpleaños</span>
-                  <span class="evento-tag">💍 Aniversarios</span>
-                  <span class="evento-tag">💼 Eventos Corporativos</span>
-                  <span class="evento-tag">🎓 Cenas de graduación</span>
-                  <span class="evento-tag">👰‍♀️ Bodas</span>
-                  <span class="evento-tag">🎉 15 años</span>
-                </div>
-              </div>
-
-              <div class="salon-servicios">
-                <h3 class="servicios-titulo">Servicios incluidos</h3>
-                <ul class="servicios-lista">
-                  <li>
-                    <i class="ri-user-line"></i> Capacidad: 50-70 personas
-                  </li>
-                  <li><i class="ri-wifi-line"></i> Wifi de alta velocidad</li>
-                  
-                  <li><i class="ri-speaker-line"></i> Sistema de sonido</li>
-                  <li><i class="ri-mic-line"></i> Micrófono inalámbrico</li>
-                  <li>
-                    <i class="ri-slideshow-line"></i> Proyector y pantalla
-                  </li>
-                  <li><i class="ri-tv-line"></i> Pantalla digital</li>
-                  <li><i class="ri-restaurant-line"></i> Opción de catering</li>
-                 <li><i class="ri-lightbulb-line"></i> Iluminación profesional</li>
-                 <li><i class="ri-calendar-check-line"></i> Coordinadora de eventos</li>
-                </ul>
-              </div>
-              <button
-              class="cotizar-btn"
-              onclick="window.open('https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20salon%20Cielo%20urbano', '_blank')"
-            >
-              <i class="ri-calendar-event-line"></i> Cotizar este salón
-            </button>
-            </div>
-          </div>
-          <!-- Salón Caoba 
-        
-          
-          -->
-          <div class="salon-caoba-container">
-            <div class="salon-header">
-              <div class="heading">
-            <span
-              ></span
-            >
-            <h1>Salón Caoba</h1>
-            </div>
-
-            <div class="salon-content">
-              <div class="salon-imagenes">
-                <div class="imagen-principal">
-                  <img
-                    src="assets/images/salones/Caoba1.png"
-                    alt="Vista principal Salón Caoba"
-                  />
-                </div>
-                <div class="imagenes-secundarias">
-                  <img
-                   src="assets/images/salones/Caoba2.png"
-                    alt="Detalle Salón Caoba"
-                  />
-                  <img
-                   src="assets/images/salones/Caoba3.png"
-                    alt="Ambiente Salón Caoba"
-                  />
-                </div>
-              </div>
-
-              <div class="salon-descripcion">
-                <h3 class="descripcion-titulo">
-                  Ubicado en Planta Baja con ingreso independiente por la calle
-                México y Cañada Strongest:
-                </h3>
-                <p>Ideal para celebrar:</p>
-
-                <div class="eventos-destacados">
-                  <span class="evento-tag">👶 Baby Shower</span>
-                  <span class="evento-tag">🎂 Cumpleaños</span>
-                  <span class="evento-tag">💍 Aniversarios</span>
-                  <span class="evento-tag">💼 Eventos Corporativos</span>
-                  <span class="evento-tag">🎓 Cenas de graduación</span>
-                  <span class="evento-tag">👰‍♀️ Bodas</span>
-                  <span class="evento-tag">🎉 15 años</span>
-                </div>
-              </div>
-
-              <div class="salon-servicios">
-                <h3 class="servicios-titulo">Servicios incluidos</h3>
-                <ul class="servicios-lista">
-                  <li>
-                    <i class="ri-user-line"></i> Capacidad: 10-40 personas
-                  </li>
-                  <li><i class="ri-wifi-line"></i> Wifi de alta velocidad</li>
-                  
-                  <li><i class="ri-speaker-line"></i> Sistema de sonido</li>
-                  <li><i class="ri-mic-line"></i> Micrófono inalámbrico</li>
-                  <li>
-                    <i class="ri-slideshow-line"></i> Proyector y pantalla
-                  </li>
-                  <li><i class="ri-tv-line"></i> Pantalla digital</li>
-                  <li><i class="ri-restaurant-line"></i> Opción de catering</li>
-                   <li><i class="ri-lightbulb-line"></i> Iluminación profesional</li>
-                   <li><i class="ri-calendar-check-line"></i> Coordinadora de eventos</li>
-                </ul>
-              </div>
-              <button
-              class="cotizar-btn"
-              onclick="window.open('https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20salon%20Caoba', '_blank')"
-            >
-              <i class="ri-calendar-event-line"></i> Cotizar este salón
-            </button>
-            </div>
-          </div>
-          <div class="otros-servicios">
-            <h3 class="otros-titulo">Servicios Adicionales</h3>
-
-            <div class="servicio-item">
-              <div class="servicio-icono">
-                <i class="ri-restaurant-2-line"></i>
-              </div>
-              <div class="servicio-contenido">
-                <h4>Catering Gourmet</h4>
+    <main id="main-content-salones">
+      <!-- Hero Slider -->
+      <section class="hero-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/salones/FOTOS/BODA/BODA-8.jpg"
+                alt="Salón Robles vista principal"
+              />
+              <div class="hero-content">
+                <h1>Salón Robles</h1>
                 <p>
-                  Bocados tradicionales y gourmet para complementar tu evento
+                  Un espacio para momentos inolvidables en el corazón de La Paz
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/salones/FOTOS/EVENTOS CORPORATIVOS/CORPORATIVO6.jpg"
+                alt="Salón Robles área de eventos"
+              />
+              <div class="hero-content">
+                <h1>Celebra con Estilo</h1>
+                <p>Ambientes elegantes para tus ocasiones especiales</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-10.jpg"
+                alt="Salón Robles decoración"
+              />
+              <div class="hero-content">
+                <h1>Experiencias Memorables</h1>
+                <p>Diseñamos cada detalle para hacer tu evento único</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Robles</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                En Salón Robles te ofrecemos mucho más que un espacio: brindamos
+                experiencias memorables en el corazón de La Paz. Nuestro salón
+                tiene capacidad para 140 personas, baños diferenciados, área de
+                cocina y todos los servicios que necesitas para un evento sin
+                preocupaciones.
+              </p>
+
+              <p>
+                Con una ubicación privilegiada y un diseño versátil, nos
+                adaptamos a tus necesidades para bodas, eventos corporativos,
+                fiestas de 15 años y más.
+              </p>
+
+              <div class="about-features">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="ri-user-line"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Capacidad</h4>
+                    <p>Hasta 140 personas</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="ri-home-4-line"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Áreas</h4>
+                    <p>Espacios diferenciados</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="ri-wifi-line"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Tecnología</h4>
+                    <p>Equipo profesional</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="ri-restaurant-line"></i>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Catering</h4>
+                    <p>Opciones disponibles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-image">
+              <img
+                src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-11.jpg"
+                alt="Salón Robles"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages Section -->
+      <section class="packages-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Paquetes Sociales</h2>
+          </div>
+
+          <div class="packages-nav">
+            <button class="package-tab active" data-tab="quince">
+              15 Años
+            </button>
+            <button class="package-tab" data-tab="wedding">Bodas</button>
+            <button class="package-tab" data-tab="graduation">
+              Graduaciones
+            </button>
+            <button class="package-tab" data-tab="baby">Baby Shower</button>
+          </div>
+
+          <!-- 15 Años Package -->
+          <div class="package-content active" id="quince">
+            <div class="package-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-15.jpg"
+                    alt="Decoración para 15 años"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-13.jpg"
+                    alt="Fiesta de 15 años"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-7.jpg"
+                    alt="fiesta de 15 años decoración"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-12.jpg"
+                    alt="Decoración para 15 años"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="package-info">
+              <h3>Fiesta de 15 Años</h3>
+              <p>
+                Un espacio mágico para una noche soñada. Nuestro salón cuenta
+                con una sutil división perfecta para diferenciar áreas para
+                jóvenes y adultos.
+              </p>
+
+              <div class="package-features">
+                <div class="package-feature">
+                  <i class="ri-palette-line"></i>
+                  <h4>Decoración</h4>
+                  <p>Temática a elección</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-music-2-line"></i>
+                  <h4>Música</h4>
+                  <p>Sonido profesional</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-cup-line"></i>
+                  <h4>Barra</h4>
+                  <p>Mocktails y bebidas</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-cake-line"></i>
+                  <h4>Candy Bar</h4>
+                  <p>Personalizado</p>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20paquete%20de%2015%20años%20en%20el%20salón%20robles"
+                class="btn"
+                target="_blank"
+                ><i class="ri-whatsapp-line"></i> Cotizar Paquete</a
+              >
+            </div>
+          </div>
+
+          <!-- Bodas Package -->
+          <div class="package-content" id="wedding">
+            <div class="package-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/BODA/BODA-1.jpg"
+                    alt="Decoración para bodas"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/BODA/BODA-8.jpg"
+                    alt="Boda elegante"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/BODA/EVENTO-BODA6.jpg"
+                    alt="Decoración para bodas"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="package-info">
+              <h3>Bodas</h3>
+              <p>
+                Celebra el amor con elegancia en un ambiente íntimo y romántico
+                diseñado para hacer de tu día especial algo inolvidable.
+              </p>
+
+              <div class="package-features">
+                <div class="package-feature">
+                  <i class="ri-heart-line"></i>
+                  <h4>Decoración</h4>
+                  <p>Romántica y elegante</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-speaker-line"></i>
+                  <h4>Sonido</h4>
+                  <p>Equipo Bose profesional</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-camera-line"></i>
+                  <h4>Fotografía</h4>
+                  <p>Sesión profesional</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-bar-chart-horizontal-line"></i>
+                  <h4>Barra</h4>
+                  <p>Bebidas premium</p>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20paquete%20de%20bodas%20en%20el%20salón%20robles"
+                class="btn"
+                target="_blank"
+                ><i class="ri-whatsapp-line"></i> Cotizar Paquete</a
+              >
+            </div>
+          </div>
+
+          <!-- Graduaciones Package -->
+          <div class="package-content" id="graduation">
+            <div class="package-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/GRADUACION/GRADUACION4.jpg"
+                    alt="Decoración para graduaciones portada"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/GRADUACION/GRADUACION3.jpg"
+                    alt="Decoración de graduaciones"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/GRADUACION/GRADUACION5.jpg"
+                    alt="Decoración para graduaciones"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="package-info">
+              <h3>Graduaciones</h3>
+              <p>
+                ¡Haz que ese esfuerzo valga una gran fiesta! Celebra este logro
+                importante con tus compañeros y familiares en un ambiente
+                diseñado para la diversión.
+              </p>
+
+              <div class="package-features">
+                <div class="package-feature">
+                  <i class="ri-team-line"></i>
+                  <h4>Decoración</h4>
+                  <p>Por promo o carrera</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-disc-line"></i>
+                  <h4>DJ</h4>
+                  <p>Música y animación</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-glass-line"></i>
+                  <h4>Barra</h4>
+                  <p>Sin alcohol</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-camera-3-line"></i>
+                  <h4>Fotografía</h4>
+                  <p>Grupal y momentos clave</p>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20paquete%20de%20graduación%20en%20el%20salón%20robles"
+                class="btn"
+                target="_blank"
+                ><i class="ri-whatsapp-line"></i> Cotizar Paquete</a
+              >
+            </div>
+          </div>
+
+          <!-- Baby Shower Package -->
+          <div class="package-content" id="baby">
+            <div class="package-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-9.jpg"
+                    alt="Decoración para baby shower"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-14.jpg"
+                    alt="Decoración del ambiente para baby shower"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="package-info">
+              <h3>Baby Shower</h3>
+              <p>
+                Dale la bienvenida a tu pequeño con ternura en un ambiente
+                cálido y acogedor diseñado para esta celebración especial.
+              </p>
+
+              <div class="package-features">
+                <div class="package-feature">
+                  <i class="ri-balloon-line"></i>
+                  <h4>Decoración</h4>
+                  <p>Temática espiritual</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-music-line"></i>
+                  <h4>Música</h4>
+                  <p>Ambiental suave</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-cake-2-line"></i>
+                  <h4>Pastelería</h4>
+                  <p>Diseño personalizado</p>
+                </div>
+                <div class="package-feature">
+                  <i class="ri-gamepad-line"></i>
+                  <h4>Actividades</h4>
+                  <p>Juegos y dinámicas</p>
+                </div>
+              </div>
+
+              <a
+                href="https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20paquete%20de%20baby%20shower%20en%20el%20salón%20robles"
+                class="btn"
+                target="_blank"
+                ><i class="ri-whatsapp-line"></i> Cotizar Paquete</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Corporate Events Section -->
+      <section class="corporate-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Eventos Corporativos</h2>
+          </div>
+
+          <div class="corporate-grid">
+            <div class="setup-options">
+              <div class="setup-option">
+                <h4>Auditorio</h4>
+                <p>
+                  20 a 140 personas. Ideal para conferencias y presentaciones.
+                </p>
+              </div>
+              <div class="setup-option">
+                <h4>Tipo U</h4>
+                <p>10 a 40 personas. Perfecto para talleres interactivos.</p>
+              </div>
+              <div class="setup-option">
+                <h4>Escuela</h4>
+                <p>Hasta 60 personas. Para capacitaciones y workshops.</p>
+              </div>
+              <div class="setup-option">
+                <h4>Europeo</h4>
+                <p>Hasta 80 personas. Configuración para cenas ejecutivas.</p>
+              </div>
+            </div>
+
+            <div class="setup-gallery">
+              <img
+                src="./assets/images/salones/FOTOS/EVENTOS CORPORATIVOS/CORPORATIVO9.jpg"
+                alt="Configuración auditorio"
+              />
+              <img
+                src="./assets/images/salones/FOTOS/EVENTOS CORPORATIVOS/CORPORATIVO6.jpg"
+                alt="Configuración tipo U"
+              />
+              <img
+                src="./assets/images/salones/FOTOS/EVENTOS CORPORATIVOS/CORPORATIVO4.jpg"
+                alt="Configuración escuela"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Servicios Adicionales</h2>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/salones/FOTOS/Adicionales/parlante.jpeg"
+                  alt="Sistema de sonido"
+                />
+              </div>
+              <div class="service-content">
+                <h3>🔊 Sonido Bose S1 Pro+</h3>
+                <p>
+                  Calidad profesional para eventos exigentes. Potencia 160W RMS,
+                  Bluetooth, USB-C, batería de 11h y 2 transmisores
+                  inalámbricos.
                 </p>
               </div>
             </div>
 
-            <div class="servicio-item">
-              <div class="servicio-icono">
-                <i class="ri-sun-line" ></i>
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/salones/FOTOS/Adicionales/microfono.jpeg"
+                  alt="Micrófonos profesionales"
+                />
               </div>
-              <div class="servicio-contenido">
-                <h4>Arreglos Florales</h4>
-                <p>Tocados con flores naturales según tu temática</p>
+              <div class="service-content">
+                <h3>🎤 Micrófonos JBL UHF</h3>
+                <p>
+                  Cobertura >10m, 6h de autonomía y alta fidelidad (100 dB A)
+                  para discursos y presentaciones claras.
+                </p>
               </div>
             </div>
 
-            <div class="servicio-item">
-              <div class="servicio-icono">
-                <i class="ri-hotel-bed-line"></i>
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/salones/FOTOS/15 AÑOS/15-AÑOS-6.jpg"
+                  alt="Servicio de fotografía"
+                />
               </div>
-              <div class="servicio-contenido">
-                <h4>Habitaciones Especiales</h4>
-                <p>Matrimoniales y suites con decoración temática</p>
+              <div class="service-content">
+                <h3>📸 Fotografía Profesional</h3>
+                <p>
+                  Captura los momentos especiales de tu evento con nuestro
+                  servicio de fotografía y edición de alta calidad.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/salones/FOTOS/BODA/BODA-8.jpg"
+                  alt="Decoración temática"
+                />
+              </div>
+              <div class="service-content">
+                <h3>🎈 Decoración Temática</h3>
+                <p>
+                  Transformamos el espacio según tu tema preferido, desde
+                  elegante y minimalista hasta extravagante y colorido.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/SalonRobles3.3.jpg"
+                  alt="Candy bar personalizado"
+                />
+              </div>
+              <div class="service-content">
+                <h3>🍬 Candy Bar</h3>
+                <p>
+                  Dulces y postres personalizados que complementan la temática
+                  de tu evento y deleitan a tus invitados.
+                </p>
+              </div>
+            </div>
+            <!--
+           <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/SalonRobles3.3.jpg"
+                  alt="Barra móvil"
+                />
+              </div>
+              <div class="service-content">
+                <h3>🍸 Barra Móvil</h3>
+                <p>
+                  Servicio completo de barra con bartenders profesionales,
+                  cócteles signature y amplia selección de bebidas.
+                </p>
+                <div class="service-price">$30 - Por persona</div>
+              </div>
+            </div>  
+          -->
+
+            <div class="service-card">
+              <div class="service-image">
+                <img
+                  src="./assets/images/salones/FOTOS/GRADUACION/GRADUACION5.jpg"
+                  alt="Meseros profesionales"
+                />
+              </div>
+              <div class="service-content">
+                <h3>🧑‍🍳 Meseros</h3>
+                <p>
+                  Personal de servicio profesional para atender a tus invitados
+                  durante el evento.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>¿Listo para reservar tu evento?</h2>
+          <p>
+            Contáctanos ahora para personalizar tu experiencia en Salón Robles y
+            hacer de tu evento algo inolvidable.
+          </p>
+          <a
+            href="https://wa.me/68005826?text=Hola%20quiero%20cotizar%20el%20salón%20robles"
+            class="btn"
+            target="_blank"
+            ><i class="ri-whatsapp-line"></i> Contactar por WhatsApp</a
+          >
         </div>
       </section>
     </main>
@@ -312,6 +639,59 @@
       crossorigin="anonymous"
       src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize hero slider
+      const heroSlider = new Swiper(".hero-slider .swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // Initialize package sliders
+      const packageSliders = document.querySelectorAll(".package-slider");
+      packageSliders.forEach((slider) => {
+        new Swiper(slider, {
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      });
+
+      // Tab functionality
+      const tabs = document.querySelectorAll(".package-tab");
+      const contents = document.querySelectorAll(".package-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs and contents
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          // Add active class to clicked tab and corresponding content
+          tab.classList.add("active");
+          const tabId = tab.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>

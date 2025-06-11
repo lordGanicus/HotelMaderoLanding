@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madero Hotel & Suites</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
   <body>
@@ -21,369 +31,508 @@
         <div id="nav-center"></div>
       </nav>
     </header>
-    
-     <section class="slider-background">
-      <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
-      <!-- slider nav -->
-      <nav class="navNextPrev">
-        <a href="#" class="main-nav prev" data-nav="previous">
-          <i class="fas fa-chevron-left"></i> <span></span>
-        </a>
-        <a href="#" class="main-nav next" data-nav="next">
-          <i class="fas fa-chevron-right"></i> <span></span>
-        </a>
-      </section>
-      <main>
-        <article >
 
+    <section class="video-section">
+      <div class="video-overlay"></div>
+      <!--
+  <div class="video-content">
+    <h1>Bienvenido a Madero Hotel & Suites</h1>
+    <p>Tu refugio de lujo y confort en el corazón de La Paz, Bolivia.</p>
+    <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20hacer%20una%20reserva" class="btn" target="_blank">Reservar ahora</a>
+  </div>
+  -->
+
+      <video autoplay muted loop playsinline id="bg-video">
+        <source
+          src="https://res.cloudinary.com/ds9subkxg/video/upload/f_webm,q_70,w_1024,h_576/v1749570316/HotelMadero_lixeh5.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/ds9subkxg/video/upload/f_mp4,q_auto,w_640,h_360/v1749570316/HotelMadero_lixeh5.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+      <div id="audio-message">🔊 Sonido activado</div>
+    </section>
+
+    <main>
       <section class="ride" id="ride">
-      <div class="container">
-        <div class="heading">
-          <span>Servicios Exclusivos</span>
-          <h1>Tu Experiencia Perfecta Comienza Aquí</h1>
-        </div>
-        
-        <div class="ride-container">
-          <!-- Box 1 - Habitaciones -->
-          <a href="habitaciones.html" class="box-link">
-            <div class="box" style="background-image: url('assets/images/habMatrimonial1.jpg');">
-              <div class="overlay">
-                <h2>Habitaciones de Ensueño</h2>
-                <p>Descansa en nuestro refugio de lujo y comodidad</p>
-                <div class="additional-content">
-                  <p><i class="ri-hotel-line"></i> Habitaciones amplias con diseño elegante y vistas impresionantes</p>
-                  <p><i class="ri-spa-line"></i> Amenidades de lujo y servicio de habitaciones 24/7</p>
-                  <p><i class="ri-wifi-line"></i> Conexión WiFi ultrarrápida y áreas de trabajo ergonómicas</p>
-                  <p><i class="ri-coupon-line"></i> Paquetes románticos y experiencias personalizadas</p>
-                </div>
-                <div class="click-indicator">Nuestras habitaciones <i class="ri-arrow-right-line"></i></div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Box 2 - Restaurante -->
-          <a href="restaurantes.html" class="box-link">
-            <div class="box" style="background-image: url('assets/images/UrbanSky1.jpg');">
-              <div class="overlay">
-                <h2>Almuerzos & Cenas Gourmet</h2>
-                <p>Una sinfonía de sabores para tu paladar</p>
-                <div class="additional-content">
-                   <p><i class="ri-earth-line"></i> Cocina internacional con toques locales</p>
-                    <p><i class="ri-restaurant-line"></i> Menú degustación disponible</p>
-                    <p><i class="ri-cocktail-line"></i> Barra de cócteles </p>
-                    <p><i class="ri-takeaway-line"></i> Opción de catering para eventos</p>
-                </div>
-                <div class="click-indicator">Más sobre nuestros restaurantes <i class="ri-arrow-right-line"></i></div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Box 3 - Salones y Eventos -->
-          <a href="Salones.html" class="box-link">
-            <div class="box" style="background-image: url('assets/images/SalonRobles1.jpg');">
-              <div class="overlay">
-                <h2>Salones & Eventos</h2>
-                <p>Espacios que transforman ocasiones en memorias</p>
-                <div class="additional-content">
-                  <p><i class="ri-ring-line"></i> Bodas de ensueño con coordinación integral</p>
-                  <p><i class="ri-presentation-line"></i> Tecnología de punta para eventos corporativos</p>
-                  <p><i class="ri-cake-line"></i> Catering personalizado para cada celebración</p>
-                  <p><i class="ri-team-line"></i> Equipo profesional para eventos impecables</p>
-                </div>
-                <div class="click-indicator">Conoce los salones <i class="ri-arrow-right-line"></i></div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-       <section class="packages" id="packages">
-        <div class="container">
+        <div class="container" id="container-ride">
           <div class="heading">
-            <span>Nuestros Exclusivos Paquetes</span>
-            <h1>Experiencias Memorables para Parejas</h2>
+            <span>Servicios Exclusivos</span>
+            <h1>Tu Experiencia Perfecta Comienza Aquí</h1>
           </div>
 
-          <!-- Paquete Diamante Eterno -->
-          <div class="package-container">
-            <div class="package-img">
-              <img src="assets/images/Diamante5.jpg" alt="Paquete Diamante Eterno" class="package-image">
-            </div>
-            <div class="package-text">
-              <h3>PAQUETE DIAMANTE ETERNO</h3>
-              <div class="price-tag">Bs. 530</div>
-              <ul class="package-features">
-                <li><span class="feature-icon">🌹</span> Decoración especial en la "SUITE MATRIMONIAL"</li>
-                <li><span class="feature-icon">🌹</span> Pétalos de rosas y Armado de Cisnes en la cama</li>
-                <li><span class="feature-icon">🌹</span> Pétalos de rosas al ingreso y en toda la habitación</li>
-                <li><span class="feature-icon">✨</span> Luces, letras "LOVE" más iniciales de la pareja</li>
-                <li><span class="feature-icon">🖼️</span> Decoración con fotografías de la pareja</li>
-                <li><span class="feature-icon">🍽️</span> Armado de mesa especial con pétalos de rosas</li>
-                <li><span class="feature-icon">🍴</span> Piqueos (3 opciones a elección)</li>
-                <li><span class="feature-icon">☕</span> Desayuno buffet para dos personas</li>
-                <li><span class="feature-icon">🍷</span> Bebidas a elección (Vino tinto o Espumante)</li>
-                <li><span class="feature-icon">🅿️</span> Servicio de parqueo</li>
-                <li><span class="feature-icon">⏰</span> Check out late hasta las 6:00 p.m. (según disponibilidad)</li>
-              </ul>
-              <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Diamante%20Eterno" class="btn" target="_blank">Reservar Ahora</a>
-            </div>
-          </div>
+          <div class="ride-container">
+            <!-- Box 1 - Habitaciones -->
+            <a href="habitaciones.html" class="box-link">
+              <div
+                class="box"
+                style="
+                  background-image: url('assets/images/habMatrimonial1.jpg');
+                "
+              >
+                <div class="overlay">
+                  <h2>Descansa en nuestro refugio de lujo y comodidad</h2>
 
-          <!-- Paquete Estrella de Oro -->
-          <div class="package-container reverse">
-            <div class="package-img">
-              <img src="assets/images/Oro3.jpg" alt="Paquete Estrella de Oro" class="package-image">
-            </div>
-            <div class="package-text">
-              <h3>PAQUETE ESTRELLA DE ORO</h3>
-              <div class="price-tag">Bs. 460</div>
-              <ul class="package-features">
-                <li><span class="feature-icon">🌹</span> Decoración especial en la "HABITACIÓN MATRIMONIAL"</li>
-                <li><span class="feature-icon">🌹</span> Pétalos de rosas y Armado de Cisnes en la cama</li>
-                <li><span class="feature-icon">✨</span> Luces, letras "LOVE" más iniciales de la pareja</li>
-                <li><span class="feature-icon">🍓</span> Frutilla con chocolate o Bandeja de piqueo de frutas</li>
-                <li><span class="feature-icon">☕</span> Desayuno buffet para dos personas</li>
-                <li><span class="feature-icon">🍷</span> Bebidas a elección (Vino tinto o Espumante)</li>
-                <li><span class="feature-icon">🅿️</span> Servicio de parqueo</li>
-                <li><span class="feature-icon">⏰</span> Early check in (según disponibilidad)</li>
-              </ul>
-              <a <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Estrella%20de%20Oro" class="btn" target="_blank">Reservar ahora</a>
-            </div>
-          </div>
+                  <div class="click-indicator">
+                    Nuestras habitaciones <i class="ri-arrow-right-line"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
 
-          <!-- Paquete Luna de Plata -->
-          <div class="package-container">
-            <div class="package-img">
-              <img src="assets/images/Plata1.jpg" alt="Paquete Luna de Plata" class="package-image">
-            </div>
-            <div class="package-text">
-              <h3>PAQUETE LUNA DE PLATA</h3>
-              <div class="price-tag">Bs. 400</div>
-              <ul class="package-features">
-                <li><span class="feature-icon">🌹</span> Decoración especial en la "HABITACIÓN MATRIMONIAL"</li>
-                <li><span class="feature-icon">🌹</span> Pétalos de rosas y Armado de Cisnes en la cama</li>
-                <li><span class="feature-icon">✨</span> Luces, letras "LOVE" más iniciales de la pareja</li>
-                <li><span class="feature-icon">🍫</span> Chocolates</li>
-                <li><span class="feature-icon">☕</span> Desayuno buffet para dos personas</li>
-                <li><span class="feature-icon">🅿️</span> Servicio de parqueo</li>
-                <li><span class="feature-icon">⏰</span> Early check in (según disponibilidad)</li>
-              </ul>
-              <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Luna%20de%20Plata" class="btn" target="_blank">Reservar ahora</a>
-            </div>
-          </div>
+            <!-- Box 2 - Restaurante Urban center -->
+            <a href="restaurantes.html" class="box-link">
+              <div
+                class="box"
+                style="
+                  background-image: url('assets/images/UrbanCenter/URBAN-CENTER.jpg ');
+                "
+              >
+                <div class="overlay">
+                  <h2>Urban Center</h2>
 
-          
+                  <div class="click-indicator">
+                    Conoce nuestro restaurante
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Box 3 - Restaurante urban Sky-->
+            <a href="restaurantes.html" class="box-link">
+              <div
+                class="box"
+                style="background-image: url('assets/images/UrbanSky1.jpg')"
+              >
+                <div class="overlay">
+                  <h2>Urban Sky</h2>
+
+                  <div class="click-indicator">
+                    Conoce n uestro restaurante
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- Box 4 - Salones y Eventos -->
+            <a href="Salones.html" class="box-link">
+              <div
+                class="box"
+                style="background-image: url('assets/images/SalonRobles1.jpg')"
+              >
+                <div class="overlay">
+                  <h2>Salón Robles</h2>
+
+                  <div class="click-indicator">
+                    Conoce nuestro salón <i class="ri-arrow-right-line"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
-      <!-- Restaurante 1                                          -->
-      <section class="restaurantes-section">
-      <div class="container">
-        <div class="heading">
-          <span>Experiencias Gastronómicas</span>
-          <h1>Nuestros Restaurantes</h1>
-        </div>
-        
-        <div class="restaurantes-container">
-          <!-- Urban Center Sport Bar -->
-        <div class="restaurante-card">
-            <!-- Sección izquierda (información compacta) -->
-            <div class="restaurante-info">
-                <h4 class="section-subtitle">Planta Baja</h4>
-                <h2 class="section-title">URBAN CENTER SPORT BAR</h2>
-                
-                <div class="restaurante-servicios">
-                    <div class="servicio active">
-                        <div class="servicio-header">
-                            <i class="fas fa-sun"></i>
-                            <h3>Desayunos</h3>
-                        </div>
-                        <div class="servicio-content">
-                            <ul>
-                                <li>Buffet matutino</li>
-                                <li>Opciones americana/continental</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="servicio">
-                        <div class="servicio-header">
-                            <i class="fas fa-utensils"></i>
-                            <h3>Almuerzos</h3>
-                        </div>
-                        <div class="servicio-content">
-                            <ul>
-                                <li>Menú ejecutivo (L-S)</li>
-                                <li>Salad bar + sopa del día</li>
-                                <li>2 opciones principales + postre</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="servicio">
-                        <div class="servicio-header">
-                            <i class="fas fa-hamburger"></i>
-                            <h3>Tardes</h3>
-                        </div>
-                        <div class="servicio-content">
-                            <ul>
-                                <li>Comida rápida</li>
-                                <li>Pizzas y tradiciones</li>
-                                <li>Bebidas variadas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="restaurante-details">
-                    <p class="restaurante-hours">
-                        <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
-                    </p>
-                </div>
-                
-                <button onclick="window.open('https://www.facebook.com/UrbanCenterSportBar')" class="btn-menu">
-                    Ver Menú Completo <i class="fas fa-external-link-alt"></i>
-                </button>
-            </div>
-            
-            <!-- Sección derecha (frame de Facebook) -->
-            <div class="menu-frame-container">
-                <div class="frame-header">
-                    <h3>Menú del Día</h3>
-                    <p>Actualizado en nuestra página de Facebook</p>
-                </div>
-                
-                <div class="frame-wrapper">
-                    <div class="frame-content">
-                        <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUrbanCenterSportBar&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                            width="500"
-                            height="600"
-                            style="border: none;"
-                            loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            sandbox="allow-scripts allow-same-origin"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-          <!-- Cielo Urbano -->
-          <div class="restaurante-card">
-            <div class="restaurante-info">
-              <h4 class="section-subtitle">Piso 7 - Vista Panorámica</h4>
-              <h2 class="section-title">CIELO URBANO</h2>
-              
-              <div class="restaurante-servicios">
-               <div class="servicio">
-                    <div class="servicio-header">
-                      <i class="fas fa-cloud-sun"></i>
-                      <h3>Mañanas</h3>
-                    </div>
-                    <div class="servicio-content">
-                      <ul>
-                        <li>4 opciones de Desayuno Brunch</li>
-                        <li>1 opción vegetariana</li>
-                      </ul>
-                    </div>
-                  </div>
-                
-                <div class="servicio">
-                    <div class="servicio-header">
-                      <i class="fas fa-fire"></i>
-                      <h3>Almuerzos</h3>
-                    </div>
-                    <div class="servicio-content">
-                      <ul>
-                        <li>Buffet Parrillero</li>
-                        <li>4 tipos de carne a elección</li>
-                        <li>Ensalada buffet + guarniciones</li>
-                        <li>Postre de la casa</li>
-                      </ul>
-                    </div>
-                </div>
-         
-                <div class="servicio">
-                  <div class="servicio-header">
-                    <i class="fas fa-moon"></i>
-                    <h3>Noches</h3>
-                  </div>
-                  <div class="servicio-content">
-                    <ul>
-                      <li>Menú gourmet a la carta</li>
-                      <li>Coctelería de autor</li>
-                    </ul>
-                  </div>
-                  </div>
-               </div>
-              <div class="restaurante-details">
-                <p class="restaurante-hours">
-                  <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
-                </p>
-                
-              </div>
-              
-              <button onclick="window.open('https://www.facebook.com/RestobarCieloUrbano/')" class="btn btn-menu">
-                Ver Menú Completo <i class="fas fa-external-link-alt"></i>
-              </button>
-            </div>
-            
-           <div class="menu-frame-container">
-                <div class="frame-header">
-                    <h3>Menú del Día</h3>
-                    <p>Actualizado en nuestra página de Facebook</p>
-                </div>
-              <div class="frame-wrapper">
-                    <div class="frame-content">
-                <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRestobarCieloUrbano&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                    width="500"
-                    height="600"
-                    style="border: none;"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    sandbox="allow-scripts allow-same-origin"
-                    data-embed-source="facebook">
-                </iframe>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>  
-     </article>
-      </main>
-          <section class="newsletter">
-      <h2>¿Buscas algo más que solo hospedaje?</h2>
-      <p>Confort, gastronomía y una atención que te hará sentir como en casa.</p>
-      <span>Haz tu reserva ahora y vive la experiencia.</span>
-      <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20hacer%20una%20reserva%20del%20paquete%20Luna%20de%20Plata" class="btn" target="_blank">Reservar ahora</a>
-    </section>
-        
-    <section class="paquete" id="maps">
+      <article>
+        <section class="packages" id="packages">
           <div class="container">
             <div class="heading">
-              <h1>Ubicación del hotel</h1>
+              <span>Nuestros Exclusivos Paquetes</span>
+              <h2>Experiencias Memorables para Parejas</h2>
+            </div>
 
+            <!-- Paquete Diamante Eterno -->
+            <div class="package-container">
+              <div class="package-img">
+                <img
+                  src="assets/images/Diamante5.jpg"
+                  alt="Paquete Diamante Eterno"
+                  class="package-image"
+                />
               </div>
-            <p class="section-text" id="section-text">
-              Calle México Nro. 1822, Zona Central
-              La Paz, Bolivia
+              <div class="package-text">
+                <h3>PAQUETE DIAMANTE ETERNO</h3>
+                <div class="price-tag">Bs. 530</div>
+                <ul class="package-features">
+                  <li>
+                    <span class="feature-icon">🌹</span> Decoración especial en
+                    la "SUITE MATRIMONIAL"
+                  </li>
+                  <li>
+                    <span class="feature-icon">🌹</span> Pétalos de rosas y
+                    Armado de Cisnes en la cama
+                  </li>
+                  <li>
+                    <span class="feature-icon">🌹</span> Pétalos de rosas al
+                    ingreso y en toda la habitación
+                  </li>
+                  <li>
+                    <span class="feature-icon">✨</span> Luces, letras "LOVE"
+                    más iniciales de la pareja
+                  </li>
+                  <li>
+                    <span class="feature-icon">🖼️</span> Decoración con
+                    fotografías de la pareja
+                  </li>
+                  <li>
+                    <span class="feature-icon">🍽️</span> Armado de mesa especial
+                    con pétalos de rosas
+                  </li>
+                  <li>
+                    <span class="feature-icon">🍴</span> Piqueos (3 opciones a
+                    elección)
+                  </li>
+                  <li>
+                    <span class="feature-icon">☕</span> Desayuno buffet para
+                    dos personas
+                  </li>
+                  <li>
+                    <span class="feature-icon">🍷</span> Bebidas a elección
+                    (Vino tinto o Espumante)
+                  </li>
+                  <li>
+                    <span class="feature-icon">🅿️</span> Servicio de parqueo
+                  </li>
+                  <li>
+                    <span class="feature-icon">⏰</span> Check out late hasta
+                    las 6:00 p.m. (según disponibilidad)
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Diamante%20Eterno"
+                  class="btn"
+                  target="_blank"
+                  >Reservar Ahora</a
+                >
+              </div>
+            </div>
 
-            </p>
- 
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.227942415239!2d-68.13142614877869!3d-16.50355082215206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f219597d60ef7%3A0x741064311511bbc9!2sMadero%20Hotel%20%26%20Suites!5e0!3m2!1ses-419!2sbo!4v1748281223308!5m2!1ses-419!2sbo"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <!-- Paquete Estrella de Oro -->
+            <div class="package-container reverse">
+              <div class="package-img">
+                <img
+                  src="assets/images/Oro3.jpg"
+                  alt="Paquete Estrella de Oro"
+                  class="package-image"
+                />
+              </div>
+              <div class="package-text">
+                <h3>PAQUETE ESTRELLA DE ORO</h3>
+                <div class="price-tag">Bs. 460</div>
+                <ul class="package-features">
+                  <li>
+                    <span class="feature-icon">🌹</span> Decoración especial en
+                    la "HABITACIÓN MATRIMONIAL"
+                  </li>
+                  <li>
+                    <span class="feature-icon">🌹</span> Pétalos de rosas y
+                    Armado de Cisnes en la cama
+                  </li>
+                  <li>
+                    <span class="feature-icon">✨</span> Luces, letras "LOVE"
+                    más iniciales de la pareja
+                  </li>
+                  <li>
+                    <span class="feature-icon">🍓</span> Frutilla con chocolate
+                    o Bandeja de piqueo de frutas
+                  </li>
+                  <li>
+                    <span class="feature-icon">☕</span> Desayuno buffet para
+                    dos personas
+                  </li>
+                  <li>
+                    <span class="feature-icon">🍷</span> Bebidas a elección
+                    (Vino tinto o Espumante)
+                  </li>
+                  <li>
+                    <span class="feature-icon">🅿️</span> Servicio de parqueo
+                  </li>
+                  <li>
+                    <span class="feature-icon">⏰</span> Early check in (según
+                    disponibilidad)
+                  </li>
+                </ul>
+                <a
+                  <a
+                  href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Estrella%20de%20Oro"
+                  class="btn"
+                  target="_blank"
+                  >Reservar ahora</a
+                >
+              </div>
+            </div>
+
+            <!-- Paquete Luna de Plata -->
+            <div class="package-container">
+              <div class="package-img">
+                <img
+                  src="assets/images/Plata1.jpg"
+                  alt="Paquete Luna de Plata"
+                  class="package-image"
+                />
+              </div>
+              <div class="package-text">
+                <h3>PAQUETE LUNA DE PLATA</h3>
+                <div class="price-tag">Bs. 400</div>
+                <ul class="package-features">
+                  <li>
+                    <span class="feature-icon">🌹</span> Decoración especial en
+                    la "HABITACIÓN MATRIMONIAL"
+                  </li>
+                  <li>
+                    <span class="feature-icon">🌹</span> Pétalos de rosas y
+                    Armado de Cisnes en la cama
+                  </li>
+                  <li>
+                    <span class="feature-icon">✨</span> Luces, letras "LOVE"
+                    más iniciales de la pareja
+                  </li>
+                  <li><span class="feature-icon">🍫</span> Chocolates</li>
+                  <li>
+                    <span class="feature-icon">☕</span> Desayuno buffet para
+                    dos personas
+                  </li>
+                  <li>
+                    <span class="feature-icon">🅿️</span> Servicio de parqueo
+                  </li>
+                  <li>
+                    <span class="feature-icon">⏰</span> Early check in (según
+                    disponibilidad)
+                  </li>
+                </ul>
+                <a
+                  href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva%20del%20paquete%20Luna%20de%20Plata"
+                  class="btn"
+                  target="_blank"
+                  >Reservar ahora</a
+                >
+              </div>
+            </div>
           </div>
         </section>
-      
-      <!-- 
+        <!-- Restaurante 1                                          -->
+        <section class="restaurantes-section">
+          <div class="container">
+            <div class="heading">
+              <span>Experiencias Gastronómicas</span>
+              <h1>Nuestros Restaurantes</h1>
+            </div>
+
+            <div class="restaurantes-container">
+              <!-- Urban Center Sport Bar -->
+              <div class="restaurante-card">
+                <!-- Sección izquierda (información compacta) -->
+                <div class="restaurante-info">
+                  <h4 class="section-subtitle">Planta Baja</h4>
+                  <h2 class="section-title">URBAN CENTER SPORT BAR</h2>
+
+                  <div class="restaurante-servicios">
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-sun"></i>
+                        <h3>Desayunos</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>Buffet matutino</li>
+                          <li>Opciones americana/continental</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Almuerzos</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>Menú ejecutivo (L-S)</li>
+                          <li>Salad bar + sopa del día</li>
+                          <li>2 opciones principales + postre</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-hamburger"></i>
+                        <h3>Tardes</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>Comida rápida</li>
+                          <li>Pizzas y tradiciones</li>
+                          <li>Bebidas variadas</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="restaurante-details">
+                    <p class="restaurante-hours">
+                      <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
+                    </p>
+                  </div>
+
+                  <button
+                    onclick="window.open('https://www.facebook.com/UrbanCenterSportBar')"
+                    class="btn-menu"
+                  >
+                    Ver Menú Completo <i class="fas fa-external-link-alt"></i>
+                  </button>
+                </div>
+
+                <!-- Sección derecha (frame de Facebook) -->
+                <div class="menu-frame-container">
+                  <div class="frame-header">
+                    <h3>Menú del Día</h3>
+                    <p>Actualizado en nuestra página de Facebook</p>
+                  </div>
+
+                  <div class="frame-wrapper">
+                    <div class="frame-content">
+                      <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUrbanCenterSportBar&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                        width="500"
+                        height="600"
+                        style="border: none"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        sandbox="allow-scripts allow-same-origin"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Cielo Urbano -->
+              <div class="restaurante-card">
+                <div class="restaurante-info">
+                  <h4 class="section-subtitle">Piso 7 - Vista Panorámica</h4>
+                  <h2 class="section-title">CIELO URBANO</h2>
+
+                  <div class="restaurante-servicios">
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-cloud-sun"></i>
+                        <h3>Mañanas</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>4 opciones de Desayuno Brunch</li>
+                          <li>1 opción vegetariana</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-fire"></i>
+                        <h3>Almuerzos</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>Buffet Parrillero</li>
+                          <li>4 tipos de carne a elección</li>
+                          <li>Ensalada buffet + guarniciones</li>
+                          <li>Postre de la casa</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="servicio">
+                      <div class="servicio-header">
+                        <i class="fas fa-moon"></i>
+                        <h3>Noches</h3>
+                      </div>
+                      <div class="servicio-content">
+                        <ul>
+                          <li>Menú gourmet a la carta</li>
+                          <li>Coctelería de autor</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="restaurante-details">
+                    <p class="restaurante-hours">
+                      <i class="far fa-clock"></i> Horario: 12:30pm - 14:00pm
+                    </p>
+                  </div>
+
+                  <button
+                    onclick="window.open('https://www.facebook.com/RestobarCieloUrbano/')"
+                    class="btn btn-menu"
+                  >
+                    Ver Menú Completo <i class="fas fa-external-link-alt"></i>
+                  </button>
+                </div>
+
+                <div class="menu-frame-container">
+                  <div class="frame-header">
+                    <h3>Menú del Día</h3>
+                    <p>Actualizado en nuestra página de Facebook</p>
+                  </div>
+                  <div class="frame-wrapper">
+                    <div class="frame-content">
+                      <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRestobarCieloUrbano&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                        width="500"
+                        height="600"
+                        style="border: none"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        sandbox="allow-scripts allow-same-origin"
+                        data-embed-source="facebook"
+                      >
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <section class="newsletter">
+      <h2>¿Buscas algo más que solo hospedaje?</h2>
+      <p>
+        Confort, gastronomía y una atención que te hará sentir como en casa.
+      </p>
+      <span>Haz tu reserva ahora y vive la experiencia.</span>
+      <a
+        href="https://wa.me/59167160515?text=Hola%2C%20quiero%20hacer%20una%20reserva%20del%20paquete%20Luna%20de%20Plata"
+        class="btn"
+        target="_blank"
+        >Reservar ahora</a
+      >
+    </section>
+
+    <section class="paquete" id="maps">
+      <div class="container">
+        <div class="heading">
+          <h1>Ubicación del hotel</h1>
+        </div>
+        <p class="section-text" id="section-text">
+          Calle México Nro. 1822, Zona Central La Paz, Bolivia
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.227942415239!2d-68.13142614877869!3d-16.50355082215206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f219597d60ef7%3A0x741064311511bbc9!2sMadero%20Hotel%20%26%20Suites!5e0!3m2!1ses-419!2sbo!4v1748281223308!5m2!1ses-419!2sbo"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- 
     - #FOOTER
   -->
 
@@ -391,26 +540,21 @@
       <div id="footer-top">
         <div class="container-footer">
           <div class="footer-brand">
-            
-           <div class="nav-header">
-            <img
-              src="assets/images/MaderoLogo.png"
-              class="logo"
-              alt="logo"
-            />
+            <div class="nav-header">
+              <img src="assets/images/MaderoLogo.png" class="logo" alt="logo" />
 
-           <div class="logo-text">
-            <div class="divider"></div>
-            <div class="brand-text">
-            <p class="hotel-name">MADERO</p>
-            <span class="hotel-subtitle">HOTEL & SUITES</span>
+              <div class="logo-text">
+                <div class="divider"></div>
+                <div class="brand-text">
+                  <p class="hotel-name">MADERO</p>
+                  <span class="hotel-subtitle">HOTEL & SUITES</span>
+                </div>
+              </div>
             </div>
-            </div>
-         
-          </div>
 
             <p class="footer-text">
-              Vive la mejor experiencia de hospedaje en La Paz, Bolivia. En Madero Hotel & Suites, te ofrecemos un servicio excepcional.
+              Vive la mejor experiencia de hospedaje en La Paz, Bolivia. En
+              Madero Hotel & Suites, te ofrecemos un servicio excepcional.
             </p>
           </div>
 
@@ -434,9 +578,7 @@
               <li class="contact-item">
                 <ion-icon name="mail-outline"></ion-icon>
 
-                <a href="#" class="contact-link"
-                  >reservas@maderosuites.com</a
-                >
+                <a href="#" class="contact-link">reservas@maderosuites.com</a>
               </li>
 
               <li class="contact-item">
@@ -448,8 +590,7 @@
                   <ion-icon name="location-outline"></ion-icon>
                 </a>
                 <address>
-                  Calle México Nro. 1822, Zona Central
-                  La Paz, Bolivia
+                  Calle México Nro. 1822, Zona Central La Paz, Bolivia
                 </address>
               </li>
             </ul>
@@ -492,18 +633,27 @@
       </div>
       <div id="footer-bottom"></div>
     </footer>
-      <div id="fb-root"></div>
-      <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0">
-      </script>
-      <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
-      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-      <script src="/assets/script/script.js"></script>
-      <script src="/assets/script/reciclar.js"></script>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/assets/script/script.js"></script>
+    <script src="/assets/script/reciclar.js"></script>
   </body>
 </html>

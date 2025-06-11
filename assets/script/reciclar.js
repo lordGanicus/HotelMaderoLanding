@@ -136,3 +136,62 @@ document.querySelectorAll(".servicio-header").forEach((header) => {
     servicio.classList.toggle("active");
   });
 });
+document.querySelectorAll(".package-tab").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.classList.remove("shine"); // reinicia si ya está
+    void btn.offsetWidth; // fuerza el reflow (reinicia animación)
+    btn.classList.add("shine");
+  });
+});
+/***************************script para salones */
+// Initialize hero slider
+/*
+const heroSlider = new Swiper(".hero-slider .swiper", {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Initialize package sliders
+const packageSliders = document.querySelectorAll(".package-slider");
+packageSliders.forEach((slider) => {
+  new Swiper(slider, {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+});
+
+// Tab functionality
+const tabs = document.querySelectorAll(".package-tab");
+const contents = document.querySelectorAll(".package-content");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    // Remove active class from all tabs and contents
+    tabs.forEach((t) => t.classList.remove("active"));
+    contents.forEach((c) => c.classList.remove("active"));
+
+    // Add active class to clicked tab and corresponding content
+    tab.classList.add("active");
+    const tabId = tab.getAttribute("data-tab");
+    document.getElementById(tabId).classList.add("active");
+  });
+});
+*/
