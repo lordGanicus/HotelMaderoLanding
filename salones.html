@@ -33,11 +33,9 @@
     />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
-  <body class="body-salones">
-    <header>
-      <nav id="nav">
-        <div id="nav-center"></div>
-      </nav>
+  <body>
+    <header id="nav">
+      <nav id="nav-center"></nav>
     </header>
     <main id="main-content-salones">
       <!-- Hero Slider -->
@@ -645,57 +643,6 @@
       src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
-    <script>
-      // Initialize hero slider
-      const heroSlider = new Swiper(".hero-slider .swiper", {
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      // Initialize package sliders
-      const packageSliders = document.querySelectorAll(".package-slider");
-      packageSliders.forEach((slider) => {
-        new Swiper(slider, {
-          loop: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      });
-
-      // Tab functionality
-      const tabs = document.querySelectorAll(".package-tab");
-      const contents = document.querySelectorAll(".package-content");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          // Remove active class from all tabs and contents
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((c) => c.classList.remove("active"));
-
-          // Add active class to clicked tab and corresponding content
-          tab.classList.add("active");
-          const tabId = tab.getAttribute("data-tab");
-          document.getElementById(tabId).classList.add("active");
-        });
-      });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>

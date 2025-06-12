@@ -22,6 +22,12 @@
   --backgound-brown: #2a2a2a;
   --backgound-lite: #474542;
 
+  --background-gradient: linear-gradient(135deg, #2a2a2a 0%, #474542 100%);
+  --facebook: #3b5998;
+  --tiktok: #000000;
+  --whatsapp: #25d366;
+  --instagram: #e1306c;
+
   --ff-poppins: "Poppins", sans-serif;
   --ff-montserrat: "Montserrat", sans-serif;
 
@@ -105,274 +111,554 @@ body {
 }
 
 /*******here navbar********/
-.video-section {
+.hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
-  background-color: black; /* Fondo para que no se vean espacios blancos */
 }
 
-#bg-video {
-  object-fit: cover;
-  width: 100%;
-  height: 90vh;
-  cursor: pointer;
-  background-color: black;
-}
-#audio-message {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-#audio-message.visible {
-  opacity: 1;
-}
-/********header***********/
-
-.section {
-  padding: 5rem 0;
-}
-
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-nav {
+.video-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.007);
-  z-index: 10;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 67.5vw; /* relación 16:9 */
+  transform: translate(-50%, -50%);
 }
 
-.nav-header {
+.hero-content-portada {
+  position: absolute; /* Asegura que esté sobre el video */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Por encima del video */
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 800px;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-content-portada h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content-portada p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: rgba(255, 255, 255, 0.85); /* blanco con transparencia */
+  color: #333; /* gris oscuro para mejor contraste */
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra para destacar */
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+/********header***********/ /* Variables de color con gradient */
+
+/* Header y Navbar */
+header {
+  background-color: transparent;
+  color: var(--beige-crema);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  height: 80px;
+}
+#nav nav {
+  background: var(--background-gradient) !important;
+}
+/* Logo con imagen y texto */
+.logo-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.nav-toggle {
-  font-size: 1.5rem;
-  color: var(--verde-oliva-claro);
-  background: transparent;
-  border-color: transparent;
-  transition: all 0.3s linear;
-  cursor: pointer;
-}
-.nav-toggle:hover {
-  color: var(--dorado-suave);
-  transform: rotate(90deg);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  height: 100%;
 }
 
-/********************LOGO**********************/
-.logo {
-  height: 60px;
-  /*transform: scale(1.1);*/
-  transform-origin: left center;
+.logo-img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+.logo-container::after {
+  transform: scaleX(1.5);
+}
+.logo-divider {
+  height: 40px;
+  width: 2px;
+  background-color: var(--white);
+  margin: 0 15px;
+  opacity: 0.7;
 }
 
 .logo-text {
-  display: flex;
-  align-items: center; /* Centra el palito y el texto entre sí */
-  gap: 0.8rem;
-}
-
-.divider {
-  width: 3px;
-  height: 40px; /* Igual a la altura del logo para centrarlo */
-  background-color: var(--dorado-suave);
-  border-radius: 3px;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.2;
+  text-align: center;
 }
 
 .hotel-name {
-  font-size: 1.3rem;
-  font-weight: 500;
-  font-family: var(--ff-montserrat);
-  text-transform: uppercase;
-  color: var(--white);
-  margin: 0;
-  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--dorado-suave);
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hotel-subtitle {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
   color: var(--white);
-  font-family: var(--ff-poppins);
-  letter-spacing: 2px;
-  font-weight: 100;
-  margin-top: 2px;
-}
-/**********links************/
-.links a {
-  color: var(--backgound-brown);
-  font-size: 1.1rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  display: block;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-  text-decoration: none;
-  border: 2px solid transparent;
-  opacity: 0.9;
-  text-shadow: 1px 1px 0 var(--black-coral), 1px 2px 0 var(--dorado-suave),
-    3px 3px 5px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
 }
 
-.links a::before {
+/* Botón de hamburguesa con efecto de transformación */
+.nav-toggle {
+  background: transparent;
+  border: none;
+  color: var(--dorado-suave);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-toggle span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--dorado-suave);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle span:nth-child(1) {
+  top: 10px;
+}
+
+.nav-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle span:nth-child(3) {
+  bottom: 10px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* Botón de reserva */
+.reserva-btn {
+  background-color: var(--dorado-suave);
+  color: var(--backgound-brown);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reserva-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.reserva-btn:hover {
+  background-color: var(--dorado-suave);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.reserva-btn:hover::before {
+  left: 100%;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 350px;
+  height: 100vh;
+  background: var(--background-gradient);
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 6rem 2rem 2rem;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.menu-lateral.active {
+  left: 0;
+}
+
+.menu-links {
+  list-style: none;
+}
+
+.menu-links li {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+}
+
+.menu-lateral.active .menu-links li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-lateral.active .menu-links li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu-lateral.active .menu-links li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.menu-lateral.active .menu-links li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.menu-lateral.active .menu-links li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.menu-lateral.active .menu-links li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.menu-links a {
+  color: var(--beige-crema);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-links a::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--dorado-suave);
+  transition: width 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: var(--dorado-suave);
+  transform: translateX(10px);
+}
+
+.menu-links a:hover::after {
   width: 100%;
-  height: 1px;
-  background: var(--backgound-brown);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.links a:hover {
-  color: var(--gainsboro);
-  letter-spacing: 0.22rem;
-  opacity: 1;
-  font-weight: 600;
-  transform: scaleX(1.1);
+.menu-links i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+  color: var(--dorado-suave);
 }
 
-.links a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-  background: var(--gainsboro);
+.dropdown-menu {
+  list-style: none;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.links a::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  border-radius: 50%;
+.dropdown-menu.active {
+  max-height: 200px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0.8rem;
+}
+
+.dropdown-menu a {
+  font-size: 1rem;
+  color: var(--beige-crema);
+}
+
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: var(--dorado-suave);
+}
+
+.dropdown-toggle.active::after {
+  transform: rotate(180deg);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
   opacity: 0;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
 }
 
-@keyframes pulse {
-  0% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateX(-50%) scale(1.4);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.6;
-  }
-}
-.social-icons {
-  display: none;
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.links {
-  height: 0;
-  transition: all 0.3s linear;
+/* Redes sociales - Efecto floral a la derecha */
+.social-flower {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 998;
 }
-.show-links {
-  height: 10rem;
+
+.social-center {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    to top right,
+    var(--backgound-brown),
+    var(--backgound-lite)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
 }
-@media screen and (min-width: 800px) {
-  .nav-center {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
+
+.social-center i {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-center:hover {
+  transform: scale(1.1);
+}
+
+.social-flower.active .social-center i {
+  transform: rotate(45deg);
+}
+
+.social-petal {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.social-petal i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Posición de los pétalos hacia la izquierda */
+.social-petal:nth-child(1) {
+  top: -60px;
+  right: 0;
+  background-color: var(--facebook);
+  transition-delay: 0.1s;
+}
+.social-petal:nth-child(2) {
+  top: -40px;
+  right: -50px;
+  background-color: var(--tiktok);
+  transition-delay: 0.2s;
+}
+.social-petal:nth-child(4) {
+  top: 0;
+  right: -60px;
+  background-color: var(--facebook);
+  transition-delay: 0.3s;
+}
+.social-petal:nth-child(3) {
+  top: 40px;
+  right: -50px;
+  background-color: var(--whatsapp);
+  transition-delay: 0.4s;
+}
+
+.social-flower.active .social-petal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.social-flower.active .social-petal:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
   }
-  .nav-header {
-    padding: 0;
+
+  .logo-img {
+    height: 50px;
+    width: 50px;
   }
-  .nav-toggle {
+
+  .hotel-name {
+    font-size: 1.5rem;
+  }
+
+  .hotel-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+  }
+
+  .logo-divider {
+    height: 30px;
+    margin: 0 10px;
+  }
+
+  .reserva-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-lateral {
+    width: 85%;
+    padding: 5rem 1.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
     display: none;
   }
-  .links {
-    height: auto;
-    display: flex;
+
+  .logo-divider {
+    display: none;
   }
-  .links a {
-    padding: 0;
-    margin: 0 0.5rem;
+
+  .social-flower {
+    bottom: 20px;
+    right: 20px;
   }
-  .links a:hover {
-    padding: 0;
-    background: transparent;
+
+  .social-center {
+    width: 45px;
+    height: 45px;
   }
-  .social-icons {
-    display: flex;
-  }
-  .social-icons a {
-    color: var(--beige-crema);
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
-    padding: 0.4rem;
-    border-radius: 40%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.623);
-    margin-left: 2px;
-    text-shadow: 1px 1px 0 var(--black), 1px 2px 0 var(--espresso-brown),
-      2px 2px 4px rgba(0, 0, 0, 0.884);
-  }
-  .social-icons a:hover {
-    transform: scaleX(1.1);
-    color: var(--marfil-claro);
-    transform: scale(1.1);
+
+  .social-petal {
+    width: 35px;
+    height: 35px;
   }
 }
 /*****************container*******************/
@@ -1474,6 +1760,7 @@ address {
   line-height: 1.5;
   font-size: 0.9rem;
 } /*************Estilos para las demas paginas******************/
+/*
 #nav .nav-center {
   position: relative;
   background: linear-gradient(
@@ -1491,8 +1778,9 @@ address {
 }
 
 #nav {
-  position: relative; /* Mantener relativo para que el dropdown absoluto se posicione bien */
+  position: relative; 
 }
+*/
 
 #nav #links {
   list-style: none;

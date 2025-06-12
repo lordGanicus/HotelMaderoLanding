@@ -1,39 +1,19 @@
-const video = document.getElementById("bg-video");
-const message = document.getElementById("audio-message");
+document.addEventListener("DOMContentLoaded", function () {
+  const socialFlower = document.getElementById("socialFlower");
+  const socialCenter = document.getElementById("socialCenter");
 
-video.addEventListener("click", () => {
-  // Activar sonido si aún está silenciado
-  if (video.muted) {
-    video.muted = false;
-    video.play();
-    mostrarMensaje("🔊 Sonido activado");
-    return;
-  }
+  // Alterna clase 'active' para mostrar/ocultar pétalos
+  socialCenter.addEventListener("click", function (e) {
+    e.stopPropagation();
+    socialFlower.classList.toggle("active");
+  });
 
-  // Toggle pausa/reproducción
-  if (video.paused) {
-    video.play();
-    mostrarMensaje("▶️ Video reanudado");
-  } else {
-    video.pause();
-    mostrarMensaje("⏸ Video pausado");
-  }
-});
-
-function mostrarMensaje(texto) {
-  message.textContent = texto;
-  message.classList.add("visible");
-
-  setTimeout(() => {
-    message.classList.remove("visible");
-  }, 2000);
-}
-/*************************aqui efecto del navBar************************************************/
-const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
-
-navToggle.addEventListener("click", function () {
-  links.classList.toggle("show-links");
+  // Cierra la flor si se hace clic fuera
+  document.addEventListener("click", function (e) {
+    if (!socialFlower.contains(e.target)) {
+      socialFlower.classList.remove("active");
+    }
+  });
 });
 /************************* efectos para los servicios**********************************************/
 

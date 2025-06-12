@@ -22,41 +22,71 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
   <body>
     <header>
-      <nav id="nav">
-        <div id="nav-center"></div>
-      </nav>
+      <nav id="nav-center"></nav>
     </header>
 
-    <section class="video-section">
-      <div class="video-overlay"></div>
-      <!--
-  <div class="video-content">
-    <h1>Bienvenido a Madero Hotel & Suites</h1>
-    <p>Tu refugio de lujo y confort en el corazón de La Paz, Bolivia.</p>
-    <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20hacer%20una%20reserva" class="btn" target="_blank">Reservar ahora</a>
-  </div>
-  -->
+    <!-- Redes sociales con efecto floral a la derecha -->
+    <div class="social-flower" id="socialFlower">
+      <div class="social-center" id="socialCenter">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="social-petal">
+        <a
+          href="https://www.tiktok.com/@maderohotelsuites?_t=ZM-8wNg5LJcS3y&_r=1"
+          target="_blank"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+      <div class="social-petal">
+        <a
+          href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <div class="social-petal">
+        <a href="https://www.facebook.com/MaderoHotelySuites" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
 
-      <video autoplay muted loop playsinline id="bg-video">
-        <source
-          src="https://res.cloudinary.com/ds9subkxg/video/upload/f_webm,q_70,w_1024,h_576/v1749570316/HotelMadero_lixeh5.webm"
-          type="video/webm"
-        />
-        <source
-          src="https://res.cloudinary.com/ds9subkxg/video/upload/f_mp4,q_auto,w_640,h_360/v1749570316/HotelMadero_lixeh5.mp4"
-          type="video/mp4"
-        />
-        Tu navegador no soporta videos HTML5.
-      </video>
-
-      <div id="audio-message">🔊 Sonido activado</div>
+    <section class="hero">
+      <div class="video-background">
+        <iframe
+          src="https://www.youtube.com/embed/wL4rl4EFbDg?autoplay=1&mute=1&controls=0&loop=1&playlist=wL4rl4EFbDg&modestbranding=1&showinfo=0&rel=0"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+          id="yt-video"
+        ></iframe>
+      </div>
+      <div class="hero-content-portada">
+        <h1>Tu Refugio de Confort y Estilo</h1>
+        <p>Vive momentos únicos en un lugar hecho para ti</p>
+        <a
+          href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva"
+          target="_blank"
+          class="cta-button"
+          >Reserva tu experiencia</a
+        >
+      </div>
     </section>
-
     <main>
       <section class="ride" id="ride">
         <div class="container" id="container-ride">
@@ -634,6 +664,33 @@
       <div id="footer-bottom"></div>
     </footer>
     <div id="fb-root"></div>
+    <script>
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("youtube-player", {
+          videoId: "wL4rl4EFbDg",
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            showinfo: 0,
+            modestbranding: 1,
+            loop: 1,
+            fs: 0,
+            cc_load_policy: 0,
+            iv_load_policy: 3,
+            autohide: 1,
+            playlist: "wL4rl4EFbDg", // necesario para que el loop funcione
+            mute: 1,
+          },
+          events: {
+            onReady: function (e) {
+              e.target.playVideo();
+            },
+          },
+        });
+      }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script
       async
       defer
@@ -653,7 +710,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="/assets/script/script.js"></script>
-    <script src="/assets/script/reciclar.js"></script>
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/reciclar.js"></script>
   </body>
 </html>

@@ -1,63 +1,56 @@
+<!-- Botón hamburguesa con efecto de transformación -->
+<button class="nav-toggle" id="navToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
-
-  
-  <div class="nav-center">
-    <div class="nav-header">
-      <img src="assets/images/MaderoLogo.png" class="logo" alt="logo" />
-
-      <div class="logo-text">
-        <div class="divider"></div>
-        <div class="brand-text">
-          <p class="hotel-name">MADERO</p>
-          <span class="hotel-subtitle">HOTEL & SUITES</span>
-        </div>
-      </div>
-      <button class="nav-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <!-- links --> 
-    <ul class="links" id="links">
-      <li>
-        <a href="index.html">Inicio</a>
-      </li>
-      <li>
-        <a href="habitaciones.html">Habitaciones</a>
-      </li>
-      <li class="dropdown">
-        <a href="">Restaurantes</a>
-        <ul class="dropdown-menu">
-          <li><a href="./UrbanCenter.html">Urban Center</a></li>
-          <li><a href="./UrbanSky.html">Urban Sky</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="salones.html">Salón</a>
-      </li>
-
-      <li>
-        <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva" target="_blank">Reservar</a>
-      </li>
-    </ul>
-    <!-- social media -->
-    <ul class="social-icons">
-      <li>
-        <a href="https://www.facebook.com/MaderoHotelySuites">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.tiktok.com/@maderohotelsuites?_t=ZM-8wNg5LJcS3y&_r=1">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    </ul>
-   
+<!-- Logo con imagen y texto -->
+<div class="logo-container">
+  <img
+    src="./assets/images/MaderoLogo.png"
+    class="logo-img"
+    alt="Madero Hotel"
+  />
+  <div class="logo-divider"></div>
+  <div class="logo-text">
+    <p class="hotel-name">MADERO</p>
+    <span class="hotel-subtitle">HOTEL & SUITES</span>
   </div>
+</div>
 
-</html>
+<!-- Botón de reserva -->
+<button class="reserva-btn" id="reservaBtn">RESERVAR AHORA</button>
+
+<!-- Menú lateral -->
+<div class="menu-lateral" id="menuLateral">
+  <ul class="menu-links">
+    <li>
+      <a href="index.html"> <i class="fas fa-home"></i> Inicio </a>
+    </li>
+    <li>
+      <a href="habitaciones.html"> <i class="fas fa-bed"></i> Habitaciones </a>
+    </li>
+    <li class="dropdown-toggle" id="restaurantesToggle">
+      <a href="#"> <i class="fas fa-utensils"></i> Restaurantes </a>
+      <ul class="dropdown-menu" id="restaurantesMenu">
+        <li><a href="./UrbanCenter.html">Urban Center</a></li>
+        <li><a href="./UrbanSky.html">Urban Sky</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="salones.html"> <i class="fas fa-door-open"></i> Salón </a>
+    </li>
+    <li>
+      <a
+        href="https://wa.me/59167160515?text=Hola%2C%20quiero%20realizar%20una%20reserva"
+        target="_blank"
+      >
+        <i class="fas fa-calendar-check"></i> Reservar
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
