@@ -40,3 +40,27 @@ window.onerror = function (msg, url, line, col, error) {
 };
 
 /********* efecto*/
+document.addEventListener("DOMContentLoaded", function () {
+  // Efecto de aparición suave al hacer scroll
+  const observerOptions = {
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".rp-package").forEach((card, index) => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    card.style.transition = `opacity 0.6s ease ${
+      index * 0.2
+    }s, transform 0.6s ease ${index * 0.2}s`;
+    observer.observe(card);
+  });
+});
