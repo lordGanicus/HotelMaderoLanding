@@ -126,7 +126,8 @@ html {
 body {
   background: rgb(250, 246, 246);
 }
-.packages-section .btn {
+.packages-section .btn,
+.cta-section .btn {
   background: linear-gradient(
     135deg,
     #5a5a5a,
@@ -146,7 +147,8 @@ body {
   user-select: none;
 }
 
-.packages-section .btn:hover {
+.packages-section .btn:hover,
+.cta-section .btn:hover {
   background: linear-gradient(135deg, #767676, #4a4a4a);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   transform: translateY(-3px);
@@ -627,6 +629,12 @@ nav {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   position: relative;
+  user-select: none; /* No permitir seleccionar texto */
+  outline: none; /* Sin contorno al recibir foco */
+  caret-color: transparent; /* No mostrar cursor de texto */
+  -webkit-user-select: none; /* para Safari */
+  -moz-user-select: none; /* para Firefox */
+  -ms-user-select: none; /* para IE/Edge */
 }
 
 .social-center i {
@@ -698,67 +706,6 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    padding: 1rem;
-  }
-
-  .logo-img {
-    height: 50px;
-    width: 50px;
-  }
-
-  .hotel-name {
-    font-size: 1.5rem;
-  }
-
-  .hotel-subtitle {
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-  }
-
-  .logo-divider {
-    height: 30px;
-    margin: 0 10px;
-  }
-
-  .reserva-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.5rem;
-  }
-
-  .menu-lateral {
-    width: 85%;
-    padding: 5rem 1.5rem 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .logo-text-footer,
-  .logo-text {
-    display: none;
-  }
-
-  .logo-divider {
-    display: none;
-  }
-
-  .social-flower {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .social-center {
-    width: 45px;
-    height: 45px;
-  }
-
-  .social-petal {
-    width: 35px;
-    height: 35px;
-  }
-}
 /*****************container*******************/
 .container {
   padding: 40px 20px; /* 20px horizontal para evitar que quede tan pegado al borde */
@@ -1319,102 +1266,6 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 1200px) {
-  .rp-package-content {
-    padding: 2.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .rp-package {
-    grid-template-columns: 1fr;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .rp-reverse {
-    direction: ltr;
-  }
-
-  .rp-package-media {
-    height: 350px;
-  }
-
-  .rp-package-content {
-    padding: 2.5rem;
-  }
-
-  .rp-package-price {
-    top: 2rem;
-    right: 2rem;
-  }
-
-  .rp-header .rp-title {
-    font-size: 2.4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .rp-container {
-    padding: 4rem 1.5rem;
-  }
-
-  .rp-header .rp-title {
-    font-size: 2.2rem;
-  }
-
-  .rp-header .rp-description {
-    font-size: 1.1rem;
-  }
-
-  .rp-package-name {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .rp-container {
-    padding: 3rem 1rem;
-  }
-
-  .rp-header .rp-title {
-    font-size: 2rem;
-  }
-
-  .rp-header .rp-subtitle {
-    font-size: 1rem;
-  }
-
-  .rp-package-content {
-    padding: 2rem 1.5rem;
-  }
-
-  .rp-package-name {
-    font-size: 1.6rem;
-    padding-bottom: 0.8rem;
-  }
-
-  .rp-package-price {
-    font-size: 1.1rem;
-    padding: 0.5rem 1.5rem;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
-
-  .rp-features li {
-    font-size: 0.95rem;
-  }
-
-  .rp-cta {
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
-  }
-
-  .rp-romantic-text {
-    font-size: 1.2rem;
-  }
-}
 /*******************************Estilos para el menu*******************************/
 .restaurante-page {
   font-family: "Poppins", sans-serif;
@@ -1633,39 +1484,6 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .restaurante-description {
-    padding: 1rem;
-  }
-  .restaurante-features,
-  .restaurante-title {
-    padding: 1rem;
-  }
-  .restaurante-info,
-  .menu-frame-container {
-    min-width: 100%;
-  }
-
-  .restaurante-info {
-    padding: 20px;
-  }
-
-  .restaurante-info .section-title {
-    font-size: 1.1rem;
-    padding: 5px;
-  }
-  .restaurante-info .section-subtitle {
-    padding: 5px;
-    text-align: center;
-  }
-  .section .frame-header h3 {
-    font-size: 1.3rem;
-  }
-
-  .frame-content iframe {
-    min-height: 420px;
-  }
-}
 /****menu servicios*/
 
 .restaurante-servicios {
@@ -2878,7 +2696,7 @@ address {
 .corporate-section {
   padding: 4rem 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./images/salones/FOTOS/GRADUACION/GRADUACION5.jpg");
+    url("https://res.cloudinary.com/ds9subkxg/image/upload/v1749841183/GRADUACION5_w9desy.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3274,5 +3092,197 @@ address {
   .footer-contact {
     min-width: 100%;
     margin-bottom: 30px;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .logo-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .hotel-name {
+    font-size: 1.5rem;
+  }
+
+  .hotel-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+  }
+
+  .logo-divider {
+    height: 30px;
+    margin: 0 10px;
+  }
+
+  .reserva-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.5rem;
+  }
+
+  .menu-lateral {
+    width: 85%;
+    padding: 5rem 1.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text-footer,
+  .logo-text {
+    display: none;
+  }
+
+  .logo-divider {
+    display: none;
+  }
+
+  .social-flower {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .social-center {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-petal {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rp-package-content {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .rp-package {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rp-reverse {
+    direction: ltr;
+  }
+
+  .rp-package-media {
+    height: 350px;
+  }
+
+  .rp-package-content {
+    padding: 2.5rem;
+  }
+
+  .rp-package-price {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .rp-header .rp-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rp-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .rp-header .rp-title {
+    font-size: 2.2rem;
+  }
+
+  .rp-header .rp-description {
+    font-size: 1.1rem;
+  }
+
+  .rp-package-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rp-container {
+    padding: 3rem 1rem;
+  }
+
+  .rp-header .rp-title {
+    font-size: 2rem;
+  }
+
+  .rp-header .rp-subtitle {
+    font-size: 1rem;
+  }
+
+  .rp-package-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .rp-package-name {
+    font-size: 1.6rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .rp-package-price {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .rp-features li {
+    font-size: 0.95rem;
+  }
+
+  .rp-cta {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+  .rp-romantic-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurante-description {
+    padding: 1rem;
+  }
+  .restaurante-features,
+  .restaurante-title {
+    padding: 1rem;
+  }
+  .restaurante-info,
+  .menu-frame-container {
+    min-width: 100%;
+  }
+
+  .restaurante-info {
+    padding: 20px;
+  }
+
+  .restaurante-info .section-title {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  .restaurante-info .section-subtitle {
+    padding: 5px;
+    text-align: center;
+  }
+  .section .frame-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .frame-content iframe {
+    min-height: 420px;
   }
 }

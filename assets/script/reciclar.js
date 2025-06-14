@@ -6,13 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (navCenter) {
         navCenter.innerHTML = data;
 
-        // ✅ Ahora que el navbar está cargado, puedes seleccionar los elementos
-        iniciarNavbar(); // Llama a tu función JS aquí
+        iniciarNavbar();
       }
     })
     .catch((error) => console.error("Error al cargar navbar:", error));
 
-  // Tu función con toda la lógica
   function iniciarNavbar() {
     try {
       const navToggle = document.getElementById("navToggle");
@@ -99,6 +97,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } catch (error) {
       console.error("Error en la inicialización del navbar:", error);
+    }
+
+    if (socialFlower && socialCenter) {
+      socialCenter.addEventListener("click", function (e) {
+        e.stopPropagation();
+        socialFlower.classList.toggle("active");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!socialFlower.contains(e.target)) {
+          socialFlower.classList.remove("active");
+        }
+      });
+    } else {
+      console.warn("No se encontró #socialFlower o #socialCenter");
     }
   }
 

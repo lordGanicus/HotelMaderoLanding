@@ -2,18 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const socialFlower = document.getElementById("socialFlower");
   const socialCenter = document.getElementById("socialCenter");
 
-  // Alterna clase 'active' para mostrar/ocultar pétalos
-  socialCenter.addEventListener("click", function (e) {
-    e.stopPropagation();
-    socialFlower.classList.toggle("active");
-  });
+  if (socialFlower && socialCenter) {
+    socialCenter.addEventListener("click", function (e) {
+      e.stopPropagation();
+      socialFlower.classList.toggle("active");
+      
+    });
 
-  // Cierra la flor si se hace clic fuera
-  document.addEventListener("click", function (e) {
-    if (!socialFlower.contains(e.target)) {
-      socialFlower.classList.remove("active");
-    }
-  });
+    document.addEventListener("click", function (e) {
+      if (!socialFlower.contains(e.target)) {
+        socialFlower.classList.remove("active");
+      }
+    });
+  } else {
+    console.warn("No se encontró #socialFlower o #socialCenter");
+  }
 });
 /************************* efectos para los servicios**********************************************/
 
@@ -64,3 +67,28 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(card);
   });
 });
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("youtube-player", {
+    videoId: "wL4rl4EFbDg",
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      showinfo: 0,
+      modestbranding: 1,
+      loop: 1,
+      fs: 0,
+      cc_load_policy: 0,
+      iv_load_policy: 3,
+      autohide: 1,
+      playlist: "wL4rl4EFbDg",
+      mute: 1,
+    },
+    events: {
+      onReady: function (e) {
+        e.target.playVideo();
+      },
+    },
+  });
+}
