@@ -213,7 +213,11 @@ body {
   margin-bottom: 30px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
-
+@media (max-width: 768px) {
+  .hero-content-portada p {
+    display: none;
+  }
+}
 .cta-button {
   display: inline-block;
   margin-top: 20px;
