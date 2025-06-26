@@ -1,13 +1,13 @@
 <div class="footer-top">
   <div class="container-footer">
+    <!-- Marca y descripción -->
     <div class="footer-brand">
-      <div class="nav-header">
+      <div class="nav-header" id="navHeader">
         <img
           src="https://res.cloudinary.com/ds9subkxg/image/upload/v1749841174/MaderoLogo_brozxx.png"
           class="logo"
           alt="logo"
         />
-
         <div class="logo-text-footer">
           <div class="divider"></div>
           <div class="brand-text">
@@ -16,83 +16,76 @@
           </div>
         </div>
       </div>
-
       <p class="footer-text">
         Vive la mejor experiencia de hospedaje en La Paz, Bolivia. En Madero
         Hotel & Suites, te ofrecemos un servicio excepcional.
       </p>
     </div>
 
-    <div class="footer-contact">
-      <h4 class="contact-title">Contáctanos</h4>
+    <!-- Contacto y redes agrupados con línea dorada vertical -->
+    <div class="footer-contact-wrapper">
+      <!-- Contáctanos -->
+      <div class="footer-contact contact-block">
+        <h4 class="contact-title">Contáctanos</h4>
+        <p class="contact-text">Contáctenos para más información.</p>
+        <ul>
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+            <a
+              href="https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información."
+              target="_blank"
+              class="contact-link"
+              >+591 77220181</a
+            >
+          </li>
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:reservas@maderosuites.com" class="contact-link"
+              >reservas@maderosuites.com</a
+            >
+          </li>
+          <li class="contact-item">
+            <ion-icon name="location-outline" id="location"></ion-icon>
+            <address>
+              Calle México Nro. 1822, Zona Central La Paz, Bolivia
+            </address>
+          </li>
+        </ul>
+      </div>
 
-      <p class="contact-text">Contáctenos para más información.</p>
+      <!-- Línea dorada vertical entre los bloques -->
+      <div class="footer-divider-vertical"></div>
 
-      <ul>
-        <li class="contact-item">
-          <ion-icon name="call-outline"></ion-icon>
-
-          <a
-            href="https://api.whatsapp.com/send/?phone=73501495&text=Hola%2C%20necesito%20más%20información."
-            target="_blank"
-            class="contact-link"
-            >+591 77220181</a
-          >
-        </li>
-
-        <li class="contact-item">
-          <ion-icon name="mail-outline"></ion-icon>
-
-          <a href="#" class="contact-link">reservas@maderosuites.com</a>
-        </li>
-
-        <li class="contact-item">
-          <a
-            href="https://maps.app.goo.gl/kpEqgcmaS5bukL7H7"
-            target="_blank"
-            class="contact-link"
-          >
-            <ion-icon name="location-outline"></ion-icon>
-          </a>
-          <address>
-            Calle México Nro. 1822, Zona Central La Paz, Bolivia
-          </address>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h4 class="contact-title">Siguenos</h4>
-      <ul>
-        <li class="contact-item">
-          <ion-icon name="logo-facebook"></ion-icon>
+      <!-- Síguenos -->
+      <div class="footer-contact social-block">
+        <h4 class="contact-title">Síguenos</h4>
+        <div class="social-icons">
           <a
             href="https://www.facebook.com/MaderoHotelySuites"
-            class="contact-link"
             target="_blank"
-            >Facebook</a
+            aria-label="Facebook"
           >
-        </li>
-
-        <li class="contact-item">
-          <ion-icon name="logo-tiktok"></ion-icon>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <span class="social-name">Facebook</span>
+          </a>
           <a
-            href="https://www.tiktok.com/@maderohotelsuites?_t=ZM-8wNg5LJcS3y&_r=1"
-            class="contact-link"
+            href="https://www.tiktok.com/@maderohotelsuites"
             target="_blank"
-            >Tik tok</a
+            aria-label="TikTok"
           >
-        </li>
-
-        <li class="contact-item">
-          <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-tiktok"></ion-icon>
+            <span class="social-name">TikTok</span>
+          </a>
           <a
-            href="https://www.instagram.com/maderohotelysuites?igsh=OWMxcXZqNXUxYmU0"
-            class="contact-link"
+            href="https://www.instagram.com/maderohotelysuites"
             target="_blank"
-            >Instagram</a
+            aria-label="Instagram"
           >
-        </li>
-      </ul>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <span class="social-name">Instagram</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
