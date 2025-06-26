@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     socialCenter.addEventListener("click", function (e) {
       e.stopPropagation();
       socialFlower.classList.toggle("active");
-      
     });
 
     document.addEventListener("click", function (e) {
