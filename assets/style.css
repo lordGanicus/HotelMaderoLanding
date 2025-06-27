@@ -126,7 +126,9 @@ html {
 body {
   background: rgb(250, 246, 246);
 }
-
+#btn-no-border {
+  border: none;
+}
 .packages-section .btn,
 .cta-section .btn {
   background: linear-gradient(
