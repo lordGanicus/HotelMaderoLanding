@@ -67,27 +67,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-var player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("youtube-player", {
-    videoId: "wL4rl4EFbDg",
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      showinfo: 0,
-      modestbranding: 1,
-      loop: 1,
-      fs: 0,
-      cc_load_policy: 0,
-      iv_load_policy: 3,
-      autohide: 1,
-      playlist: "wL4rl4EFbDg",
-      mute: 1,
-    },
-    events: {
-      onReady: function (e) {
-        e.target.playVideo();
+document.addEventListener("DOMContentLoaded", function () {
+  // Crear el script para cargar la API de YouTube
+  var tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+
+  // Declarar variable global player
+  var player;
+
+  // Esta función será llamada automáticamente por la API cuando esté lista
+  window.onYouTubeIframeAPIReady = function () {
+    player = new YT.Player("youtube-player", {
+      videoId: "wL4rl4EFbDg",
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        controls: 0,
+        loop: 1,
+        playlist: "wL4rl4EFbDg",
+        modestbranding: 1,
+        rel: 0,
+        showinfo: 0,
+        fs: 0,
+        iv_load_policy: 3,
+        disablekb: 1,
       },
-    },
-  });
-}
+      events: {
+        onReady: function (event) {
+          event.target.playVideo();
+        },
+      },
+    });
+  };
+});

@@ -533,3 +533,16 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error general en el código principal:", error);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".package-tab");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Quitar la clase active de todos
+      tabs.forEach((t) => t.classList.remove("active"));
+      // Poner active solo al que clickeaste
+      tab.classList.add("active");
+    });
+  });
+});
